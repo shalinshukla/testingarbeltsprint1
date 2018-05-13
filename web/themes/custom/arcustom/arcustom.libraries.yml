@@ -2,3 +2,21 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      styleguide/css/bootstrap.css: {}
+      styleguide/css/bootstrap.css: {}
+      styleguide/css/shop.css: {}
+      styleguide/css/style7.css: {}
+      styleguide/css/style.css: {}
+      styleguide/css/font-awesome.css: {}
+global-js:
+   js:
+    styleguide/js/modernizr-2.6.2.min.js: {}
+    styleguide/js/classie.js: {}
+    styleguide/js/demo1.js: {}
+    styleguide/js/minicart.js: {}
+    styleguide/js/search.js: {}
+    styleguide/js/responsiveslides.min.js: {}
+    styleguide/js/move-top.js: {}
+    styleguide/js/easing.js: {}
+    styleguide/js/bootstrap-3.1.1.min.js: {}
+
