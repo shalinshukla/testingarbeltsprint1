@@ -1,6 +1,6 @@
 uuid: ff8e55ba-0537-4edd-811a-076a7973af61
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.account
