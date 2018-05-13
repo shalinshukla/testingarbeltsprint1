@@ -21,3 +21,4 @@ regions:
 
 libraries:
   - 'arcustom/global-styling'
+  - 'arcustom/global-js'
