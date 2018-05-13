@@ -1,0 +1,22 @@
+uuid: 63ead7f9-2786-4f47-847b-cf65693d4982
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - arcustom
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: arcustom_powered
+theme: arcustom
+region: footer
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

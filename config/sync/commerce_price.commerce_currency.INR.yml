@@ -1,0 +1,9 @@
+uuid: f34bcf63-e910-42c0-bd48-fbaa40e78e12
+langcode: en
+status: true
+dependencies: {  }
+currencyCode: INR
+name: 'Indian Rupee'
+numericCode: '356'
+symbol: ₹
+fractionDigits: 2

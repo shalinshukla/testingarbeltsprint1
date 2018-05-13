@@ -1,0 +1,22 @@
+uuid: 3751ce28-c518-41ed-958f-4b69f784cf7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - arcustom
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: arcustom_help
+theme: arcustom
+region: help
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

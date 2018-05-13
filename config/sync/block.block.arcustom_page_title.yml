@@ -1,0 +1,20 @@
+uuid: ad34054d-8537-45af-9f13-ad2aa4fcd9c0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - arcustom
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: arcustom_page_title
+theme: arcustom
+region: header
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
