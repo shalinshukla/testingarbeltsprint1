@@ -1,3 +1,5 @@
-/**
- * Place your custom styles here.
- */
+
+div.overlay-contentpush {
+  width: 350px;
+  background-color: #cacaca;
+}
