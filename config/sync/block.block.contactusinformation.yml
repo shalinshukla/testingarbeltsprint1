@@ -1,0 +1,25 @@
+uuid: 92152346-fd4b-4c2f-be9c-7cf4f50d4b15
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5a84a78b-a807-42ec-bfc7-de11f473a388'
+  module:
+    - block_content
+  theme:
+    - arcustom
+id: contactusinformation
+theme: arcustom
+region: footer_second
+weight: -9
+provider: null
+plugin: 'block_content:5a84a78b-a807-42ec-bfc7-de11f473a388'
+settings:
+  id: 'block_content:5a84a78b-a807-42ec-bfc7-de11f473a388'
+  label: 'Contact us Information'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -28,6 +28,7 @@
         "drupal/eck": "^1.0@alpha",
         "drupal/inline_entity_form": "^1.0@beta",
         "drupal/paragraphs": "^1.2",
+        "drupal/recreate_block_content": "^2.0",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",

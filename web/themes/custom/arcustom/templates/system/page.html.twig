@@ -43,7 +43,8 @@
  * - page.content: The main content of the current page.
  * - page.sidebar_first: Items for the first sidebar.
  * - page.sidebar_second: Items for the second sidebar.
- * - page.footer: Items for the footer region.
+ * - page.footer_first: Items for the footer region.
+ * - page.footer_second: Items for the Seconf footer region.
  *
  * @ingroup templates
  *
@@ -144,10 +145,17 @@
   </div>
 {% endblock %}
 
-{% if page.footer %}
-  {% block footer %}
-    <footer class="footer {{ container }}" role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endblock %}
-{% endif %}
+
+<div class="footer_agileinfo_w3">
+  <div class="col-md-3 footer-left">
+    {{ page.footer_first }}
+  </div>
+  <div class="col-md-9 footer-right">
+    <div class="sign-grds">
+      {{ page.footer_second }}
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <p class="copy-right-w3ls-agileits">© 2018 Downy Shoes. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+</div>
+

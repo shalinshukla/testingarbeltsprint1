@@ -1,0 +1,25 @@
+uuid: 0dc8381f-49dc-4048-8dcc-34e4b48c4915
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:75fc8fe9-1f6a-4235-bd44-0452b3f6b07a'
+  module:
+    - block_content
+  theme:
+    - arcustom
+id: socialicons
+theme: arcustom
+region: navigation
+weight: 0
+provider: null
+plugin: 'block_content:75fc8fe9-1f6a-4235-bd44-0452b3f6b07a'
+settings:
+  id: 'block_content:75fc8fe9-1f6a-4235-bd44-0452b3f6b07a'
+  label: 'Social Icons'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
