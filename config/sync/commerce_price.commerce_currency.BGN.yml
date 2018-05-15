@@ -1,0 +1,9 @@
+uuid: b51ba899-c3e9-4ee8-991d-e10ca4253b22
+langcode: en
+status: true
+dependencies: {  }
+currencyCode: BGN
+name: 'Bulgarian Lev'
+numericCode: '975'
+symbol: BGN
+fractionDigits: 2
