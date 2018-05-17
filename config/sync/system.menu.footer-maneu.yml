@@ -1,8 +1,0 @@
-uuid: 7ea8714c-a1eb-4fba-b30d-b1ae27b9e980
-langcode: en
-status: true
-dependencies: {  }
-id: footer-maneu
-label: 'Footer Maneu'
-description: 'Footer Links'
-locked: false

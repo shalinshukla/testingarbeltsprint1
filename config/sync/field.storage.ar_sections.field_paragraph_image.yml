@@ -1,0 +1,30 @@
+uuid: afe552ac-807f-46dc-a59e-317cc3ea5114
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - file
+    - image
+id: ar_sections.field_paragraph_image
+field_name: field_paragraph_image
+entity_type: ar_sections
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

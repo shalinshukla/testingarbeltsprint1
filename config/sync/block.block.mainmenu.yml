@@ -1,4 +1,4 @@
-uuid: 9e708afb-798a-49c7-ab3b-6b27f4d81a9c
+uuid: 4abd1774-4095-4492-b3e5-1965a4ebe0d1
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - arcustom
+    - ar
 id: mainmenu
-theme: arcustom
+theme: ar
 region: navigation
-weight: 0
+weight: -6
 provider: null
 plugin: 'system_menu_block:main-menu'
 settings:

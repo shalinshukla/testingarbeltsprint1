@@ -1,0 +1,20 @@
+uuid: 50782691-e0ef-40d4-af54-6d1c922cada1
+langcode: en
+status: false
+dependencies:
+  theme:
+    - ar
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: ar_page_title
+theme: ar
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

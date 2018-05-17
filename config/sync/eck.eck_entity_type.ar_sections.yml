@@ -1,0 +1,10 @@
+uuid: 5a14cefb-d448-4f57-9c3b-7f0b21332589
+langcode: en
+status: true
+dependencies: {  }
+id: ar_sections
+label: 'AR Sections'
+created: false
+changed: false
+uid: false
+title: true

@@ -1,0 +1,22 @@
+uuid: 8e5f16a5-4d21-4bbc-abd9-c97bbd82cbf5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ar
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: ar_content
+theme: ar
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

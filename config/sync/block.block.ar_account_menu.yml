@@ -1,0 +1,26 @@
+uuid: 2e0c250f-6450-403e-b4e7-7651a5fe5d47
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - ar
+_core:
+  default_config_hash: DweBpscQZdG0-fHkSpUzdYucrNH45G_KF7Z82V-oyQM
+id: ar_account_menu
+theme: ar
+region: navigation_collapsible
+weight: -6
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }
