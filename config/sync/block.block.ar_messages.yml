@@ -1,0 +1,22 @@
+uuid: c76c3a29-6b67-49b6-92dc-f5bc681301ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ar
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: ar_messages
+theme: ar
+region: header
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

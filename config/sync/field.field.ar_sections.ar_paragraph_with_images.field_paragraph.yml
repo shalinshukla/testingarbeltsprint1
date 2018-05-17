@@ -1,0 +1,19 @@
+uuid: 4eecd1e6-e88a-49b4-af9b-e0b8bd5a5fe0
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_paragraph_with_images
+    - field.storage.ar_sections.field_paragraph
+id: ar_sections.ar_paragraph_with_images.field_paragraph
+field_name: field_paragraph
+entity_type: ar_sections
+bundle: ar_paragraph_with_images
+label: Paragraph
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

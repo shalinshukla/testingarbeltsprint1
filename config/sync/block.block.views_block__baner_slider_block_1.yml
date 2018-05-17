@@ -1,0 +1,24 @@
+uuid: a830176c-4b35-49df-ade9-e9a0bd60beb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.baner_slider
+  module:
+    - views
+  theme:
+    - ar
+id: views_block__baner_slider_block_1
+theme: ar
+region: slider
+weight: -7
+provider: null
+plugin: 'views_block:baner_slider-block_1'
+settings:
+  id: 'views_block:baner_slider-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

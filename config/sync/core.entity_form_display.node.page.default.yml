@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_reference_field
     - node.type.page
   module:
+    - inline_entity_form
     - path
     - text
 _core:
@@ -30,6 +32,19 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_reference_field:
+    weight: 121
+    settings:
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
   path:
     type: path
     weight: 30

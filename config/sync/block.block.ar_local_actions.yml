@@ -1,0 +1,20 @@
+uuid: 451cdf5d-4e83-4707-8ac6-580542d05737
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ar
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: ar_local_actions
+theme: ar
+region: header
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

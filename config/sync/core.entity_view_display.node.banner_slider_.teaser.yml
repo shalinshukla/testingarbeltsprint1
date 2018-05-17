@@ -1,0 +1,18 @@
+uuid: 73d2f8a4-d6bd-46ec-b517-b8e791f26c4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.banner_slider_
+  module:
+    - user
+id: node.banner_slider_.teaser
+targetEntityType: node
+bundle: banner_slider_
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

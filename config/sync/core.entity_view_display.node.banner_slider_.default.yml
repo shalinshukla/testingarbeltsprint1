@@ -1,0 +1,28 @@
+uuid: 1b1e8f94-7534-4bc5-80c4-890470182aec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.banner_slider_.field_banner_image
+    - node.type.banner_slider_
+  module:
+    - image
+    - user
+id: node.banner_slider_.default
+targetEntityType: node
+bundle: banner_slider_
+mode: default
+content:
+  field_banner_image:
+    weight: 101
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

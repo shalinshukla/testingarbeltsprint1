@@ -1,0 +1,19 @@
+global-styling:
+  css:
+    theme:
+        css/style.css: {}
+        halo/css/bootstrap.min.css: {}
+        halo/css/font-awesome.min.css: {}
+        halo/css/flaticon.css: {}
+        halo/css/animate.css: {}
+        halo/css/owl.carousel.css: {}
+        halo/css/style.css: {}
+
+global-js:
+  js:
+    halo/js/jquery-3.2.1.min.js: {}
+    halo/js/bootstrap.min.js: {}
+    halo/js/owl.carousel.min.js: {}
+    halo/js/mixitup.min.js: {}
+    halo/js/circle-progress.min.js: {}
+    halo/js/main.js: {}

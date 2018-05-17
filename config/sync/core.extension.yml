@@ -50,7 +50,6 @@ module:
   profile: 0
   quickedit: 0
   rdf: 0
-  recreate_block_content: 0
   search: 0
   shortcut: 0
   state_machine: 0
@@ -73,6 +72,7 @@ theme:
   seven: 0
   bootstrap: 0
   arcustom: 0
+  ar: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
