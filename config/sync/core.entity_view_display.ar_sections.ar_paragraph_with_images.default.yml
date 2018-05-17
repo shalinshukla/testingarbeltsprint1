@@ -1,0 +1,70 @@
+uuid: a4bed019-5773-4c4b-b21f-63f65f2321fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_paragraph_with_images
+    - field.field.ar_sections.ar_paragraph_with_images.field_paragraph
+    - field.field.ar_sections.ar_paragraph_with_images.field_paragraph_image
+    - field.field.ar_sections.ar_paragraph_with_images.field_sub_title
+  module:
+    - ds
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - title
+        - field_sub_title
+        - field_paragraph
+        - field_paragraph_image
+id: ar_sections.ar_paragraph_with_images.default
+targetEntityType: ar_sections
+bundle: ar_paragraph_with_images
+mode: default
+content:
+  field_paragraph:
+    weight: -3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_paragraph_image:
+    weight: -2
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_sub_title:
+    weight: -4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

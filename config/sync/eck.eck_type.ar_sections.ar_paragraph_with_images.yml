@@ -1,0 +1,9 @@
+uuid: c35cfd22-3e88-426b-aac5-dc5fe4db8b82
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.ar_sections
+name: 'AR Paragraph with Images'
+type: ar_paragraph_with_images
+description: 'To add the images'

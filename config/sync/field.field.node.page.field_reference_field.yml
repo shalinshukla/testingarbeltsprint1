@@ -1,0 +1,28 @@
+uuid: b11e634b-b189-40d1-9c18-f6a86402b704
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_paragraph_with_images
+    - field.storage.node.field_reference_field
+    - node.type.page
+id: node.page.field_reference_field
+field_name: field_reference_field
+entity_type: node
+bundle: page
+label: 'Reference Field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:ar_sections'
+  handler_settings:
+    target_bundles:
+      ar_paragraph_with_images: ar_paragraph_with_images
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

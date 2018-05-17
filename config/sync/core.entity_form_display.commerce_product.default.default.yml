@@ -5,13 +5,10 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
-    - field.field.commerce_product.default.field_product_image
     - field.field.commerce_product.default.stores
     - field.field.commerce_product.default.variations
-    - image.style.thumbnail
   module:
     - commerce
-    - image
     - inline_entity_form
     - path
     - text
@@ -36,14 +33,6 @@ content:
     weight: 5
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_product_image:
-    weight: 9
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   path:
     type: path
