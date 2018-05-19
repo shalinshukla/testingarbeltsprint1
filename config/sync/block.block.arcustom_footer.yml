@@ -1,6 +1,6 @@
 uuid: c0826a45-c1b2-490e-9f74-0a31c5f5b82a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -12,7 +12,7 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: arcustom_footer
 theme: arcustom
-region: footer
+region: navigation
 weight: -5
 provider: null
 plugin: 'system_menu_block:footer'

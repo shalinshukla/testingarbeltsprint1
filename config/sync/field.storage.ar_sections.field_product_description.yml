@@ -1,0 +1,21 @@
+uuid: 8b2d6528-a39a-4954-8b34-458b59ae05b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+id: ar_sections.field_product_description
+field_name: field_product_description
+entity_type: ar_sections
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

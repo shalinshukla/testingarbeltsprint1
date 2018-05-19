@@ -1,0 +1,14 @@
+{% set img = ds_content.field_product_image|render|trim|striptags %}
+{% set name = ds_content.field_product_name|render|trim|striptags %}
+{% set description = ds_content.field_product_description|render|trim|striptags %}
+
+<div class="single-portfolio set-bg" data-setbg="{{ img|render|trim|striptags }}">
+  <a href="single-work.html" class="portfolio-info">
+    <div class="pfbg set-bg" data-setbg="img/portfolio/1.jpg"></div>
+    <h5>{{ name|render|trim|striptags }}</h5>
+    <p>{{ description|render|trim|striptags }}</p>
+  </a>
+</div>
+
+
+

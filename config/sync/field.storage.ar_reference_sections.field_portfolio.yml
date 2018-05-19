@@ -1,0 +1,19 @@
+uuid: 94af7ba7-e289-479c-be78-1ea69255e112
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+id: ar_reference_sections.field_portfolio
+field_name: field_portfolio
+entity_type: ar_reference_sections
+type: entity_reference
+settings:
+  target_type: ar_sections
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

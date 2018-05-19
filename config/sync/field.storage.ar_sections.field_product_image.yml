@@ -1,0 +1,30 @@
+uuid: a3dc44e3-de66-46a7-8f80-8d94c094bb5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - file
+    - image
+id: ar_sections.field_product_image
+field_name: field_product_image
+entity_type: ar_sections
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

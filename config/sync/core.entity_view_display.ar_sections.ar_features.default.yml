@@ -1,0 +1,52 @@
+uuid: 2838aca6-5dad-4c7d-b1ea-35f800ad4000
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_features
+    - field.field.ar_sections.ar_features.field_features
+  module:
+    - ds
+    - entity_reference_revisions
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - title
+        - field_features
+id: ar_sections.ar_features.default
+targetEntityType: ar_sections
+bundle: ar_features
+mode: default
+content:
+  field_features:
+    type: entity_reference_revisions_entity_view
+    weight: -4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

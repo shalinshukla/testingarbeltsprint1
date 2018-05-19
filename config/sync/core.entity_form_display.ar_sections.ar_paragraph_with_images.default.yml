@@ -4,17 +4,31 @@ status: true
 dependencies:
   config:
     - eck.eck_type.ar_sections.ar_paragraph_with_images
+    - field.field.ar_sections.ar_paragraph_with_images.field_category_types
     - field.field.ar_sections.ar_paragraph_with_images.field_paragraph
     - field.field.ar_sections.ar_paragraph_with_images.field_paragraph_image
     - field.field.ar_sections.ar_paragraph_with_images.field_sub_title
     - image.style.thumbnail
   module:
     - image
+    - paragraphs
 id: ar_sections.ar_paragraph_with_images.default
 targetEntityType: ar_sections
 bundle: ar_paragraph_with_images
 mode: default
 content:
+  field_category_types:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_paragraph:
     weight: 4
     settings:

@@ -1,0 +1,28 @@
+uuid: c4b5ba88-69d7-4aab-8f2b-4701cee799a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_reference_sections.ar_portfolio
+    - eck.eck_type.ar_sections.ar_portfolio_section
+    - field.storage.ar_reference_sections.field_portfolio
+id: ar_reference_sections.ar_portfolio.field_portfolio
+field_name: field_portfolio
+entity_type: ar_reference_sections
+bundle: ar_portfolio
+label: portfolio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:ar_sections'
+  handler_settings:
+    target_bundles:
+      ar_portfolio_section: ar_portfolio_section
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -60,8 +60,15 @@ module:
   tour: 0
   user: 0
   views_ui: 0
+  webform: 0
+  webform_image_select: 0
+  webform_node: 0
+  webform_scheduled_email: 0
+  webform_templates: 0
+  webform_ui: 0
   ds: 1
   menu_link_content: 1
+  webform_bootstrap: 1
   views: 10
   paragraphs: 11
   standard: 1000

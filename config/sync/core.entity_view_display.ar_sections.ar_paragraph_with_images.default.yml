@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - eck.eck_type.ar_sections.ar_paragraph_with_images
+    - field.field.ar_sections.ar_paragraph_with_images.field_category_types
     - field.field.ar_sections.ar_paragraph_with_images.field_paragraph
     - field.field.ar_sections.ar_paragraph_with_images.field_paragraph_image
     - field.field.ar_sections.ar_paragraph_with_images.field_sub_title
   module:
     - ds
+    - entity_reference_revisions
     - image
 third_party_settings:
   ds:
@@ -18,31 +20,42 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
-        classes: {  }
         wrappers:
           ds_content: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
         link_custom: ''
+        classes:
+          layout_class: {  }
     regions:
       ds_content:
         - title
         - field_sub_title
         - field_paragraph
         - field_paragraph_image
+        - field_category_types
 id: ar_sections.ar_paragraph_with_images.default
 targetEntityType: ar_sections
 bundle: ar_paragraph_with_images
 mode: default
 content:
+  field_category_types:
+    type: entity_reference_revisions_entity_view
+    weight: -1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: ds_content
   field_paragraph:
     weight: -3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
-    region: content
+    region: ds_content
   field_paragraph_image:
     weight: -2
     label: hidden
@@ -50,7 +63,7 @@ content:
       image_style: ''
     third_party_settings: {  }
     type: image_url
-    region: content
+    region: ds_content
   field_sub_title:
     weight: -4
     label: hidden
@@ -58,12 +71,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: ds_content
   title:
     label: hidden
     type: string
     weight: -5
-    region: content
+    region: ds_content
     settings:
       link_to_entity: false
     third_party_settings: {  }

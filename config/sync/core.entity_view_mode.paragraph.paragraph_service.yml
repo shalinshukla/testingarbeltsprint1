@@ -1,0 +1,10 @@
+uuid: bfe5f7ad-d1b8-45ad-b61c-984859426788
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.paragraph_service
+label: 'Paragraph Service'
+targetEntityType: paragraph
+cache: true

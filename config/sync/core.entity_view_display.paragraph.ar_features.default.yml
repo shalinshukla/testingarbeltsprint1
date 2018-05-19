@@ -1,0 +1,52 @@
+uuid: 6db3037a-c29c-4461-840d-5f8aa509664c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ar_features.field_feature_count
+    - field.field.paragraph.ar_features.field_feature_list
+    - paragraphs.paragraphs_type.ar_features
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_feature_list
+        - field_feature_count
+id: paragraph.ar_features.default
+targetEntityType: paragraph
+bundle: ar_features
+mode: default
+content:
+  field_feature_count:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_feature_list:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+hidden: {  }
