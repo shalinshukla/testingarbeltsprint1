@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
     - field.field.node.page.field_category_types
     - field.field.node.page.field_features_section
     - field.field.node.page.field_portfolio_refernce_
@@ -11,7 +10,6 @@ dependencies:
     - node.type.page
   module:
     - ds
-    - text
     - user
 third_party_settings:
   ds:
@@ -44,13 +42,6 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 100
-    region: ds_content
-    settings: {  }
-    third_party_settings: {  }
   field_category_types:
     weight: 105
     label: hidden

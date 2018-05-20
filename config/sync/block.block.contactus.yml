@@ -1,0 +1,25 @@
+uuid: 80bf4007-726a-42a4-9b23-bbc33c325165
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:contact_us:14a1b2df-bd52-4933-9d23-cd1a147b201b'
+  module:
+    - block_content
+  theme:
+    - ar
+id: contactus
+theme: ar
+region: footer
+weight: -9
+provider: null
+plugin: 'block_content:14a1b2df-bd52-4933-9d23-cd1a147b201b'
+settings:
+  id: 'block_content:14a1b2df-bd52-4933-9d23-cd1a147b201b'
+  label: 'Contact Us'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
