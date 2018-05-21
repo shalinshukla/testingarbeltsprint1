@@ -1,0 +1,28 @@
+uuid: 5dba0477-ee62-452f-8ad4-e4c68911f920
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_reference_sections.ar_testimonial_section
+    - eck.eck_type.ar_sections.ar_testimonial
+    - field.storage.ar_reference_sections.field_testimonial
+id: ar_reference_sections.ar_testimonial_section.field_testimonial
+field_name: field_testimonial
+entity_type: ar_reference_sections
+bundle: ar_testimonial_section
+label: Testimonial
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:ar_sections'
+  handler_settings:
+    target_bundles:
+      ar_testimonial: ar_testimonial
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

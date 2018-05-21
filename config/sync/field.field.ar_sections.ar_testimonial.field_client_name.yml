@@ -1,0 +1,19 @@
+uuid: 91f7df9c-3f21-4057-a321-e8d94615e25e
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_testimonial
+    - field.storage.ar_sections.field_client_name
+id: ar_sections.ar_testimonial.field_client_name
+field_name: field_client_name
+entity_type: ar_sections
+bundle: ar_testimonial
+label: 'Client Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

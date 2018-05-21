@@ -1,13 +1,14 @@
-uuid: 2838aca6-5dad-4c7d-b1ea-35f800ad4000
+uuid: e1fac714-8569-478b-92b4-672fa8107740
 langcode: en
 status: true
 dependencies:
   config:
-    - eck.eck_type.ar_sections.ar_features
-    - field.field.ar_sections.ar_features.field_features
+    - eck.eck_type.ar_reference_sections.ar_testimonial_section
+    - field.field.ar_reference_sections.ar_testimonial_section.field_overlay_image
+    - field.field.ar_reference_sections.ar_testimonial_section.field_testimonial
   module:
     - ds
-    - entity_reference_revisions
+    - image
 third_party_settings:
   ds:
     layout:
@@ -27,20 +28,29 @@ third_party_settings:
     regions:
       ds_content:
         - title
-        - field_features
-id: ar_sections.ar_features.default
-targetEntityType: ar_sections
-bundle: ar_features
+        - field_testimonial
+        - field_overlay_image
+id: ar_reference_sections.ar_testimonial_section.default
+targetEntityType: ar_reference_sections
+bundle: ar_testimonial_section
 mode: default
 content:
-  field_features:
-    type: entity_reference_revisions_entity_view
+  field_overlay_image:
+    weight: -3
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: ds_content
+  field_testimonial:
     weight: -4
     label: hidden
     settings:
+      link: true
       view_mode: default
-      link: ''
     third_party_settings: {  }
+    type: entity_reference_entity_view
     region: ds_content
   title:
     label: hidden

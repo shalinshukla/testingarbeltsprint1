@@ -1,0 +1,32 @@
+uuid: 3e9cc36f-b1f0-4b04-bca6-9ed89673664d
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_banner
+    - eck.eck_type.ar_sections.ar_paragraph_with_images
+    - eck.eck_type.ar_sections.ar_testimonial
+    - field.storage.node.field_reference_section
+    - node.type.simple_reference_pages
+id: node.simple_reference_pages.field_reference_section
+field_name: field_reference_section
+entity_type: node
+bundle: simple_reference_pages
+label: 'Reference Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:ar_sections'
+  handler_settings:
+    target_bundles:
+      ar_banner: ar_banner
+      ar_paragraph_with_images: ar_paragraph_with_images
+      ar_testimonial: ar_testimonial
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ar_banner
+field_type: entity_reference

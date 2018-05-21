@@ -1,0 +1,50 @@
+uuid: c2c5fb8c-314b-4d79-b929-233eb8f9fff8
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_testimonial
+    - field.field.ar_sections.ar_testimonial.field_client_name
+    - field.field.ar_sections.ar_testimonial.field_clients_description
+    - field.field.ar_sections.ar_testimonial.field_clients_image
+    - image.style.thumbnail
+  module:
+    - image
+id: ar_sections.ar_testimonial.default
+targetEntityType: ar_sections
+bundle: ar_testimonial
+mode: default
+content:
+  field_client_name:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_clients_description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_clients_image:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

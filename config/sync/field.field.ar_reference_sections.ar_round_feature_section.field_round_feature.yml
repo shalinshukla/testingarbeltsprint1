@@ -1,0 +1,28 @@
+uuid: 97e84e7d-6058-47cf-8abf-e5fd1ec40db5
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_reference_sections.ar_round_feature_section
+    - eck.eck_type.ar_sections.ar_features
+    - field.storage.ar_reference_sections.field_round_feature
+id: ar_reference_sections.ar_round_feature_section.field_round_feature
+field_name: field_round_feature
+entity_type: ar_reference_sections
+bundle: ar_round_feature_section
+label: 'Round Feature'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:ar_sections'
+  handler_settings:
+    target_bundles:
+      ar_features: ar_features
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

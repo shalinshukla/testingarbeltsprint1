@@ -1,0 +1,30 @@
+uuid: 6f7dd8d9-b7eb-4da6-87ca-e778133d1e74
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - file
+    - image
+id: ar_reference_sections.field_overlay_image
+field_name: field_overlay_image
+entity_type: ar_reference_sections
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

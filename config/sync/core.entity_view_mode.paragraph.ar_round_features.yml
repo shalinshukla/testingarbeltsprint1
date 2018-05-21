@@ -1,0 +1,10 @@
+uuid: ff701b5f-849e-46a5-b9ac-21a526e1d39c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.ar_round_features
+label: 'Ar Round Features'
+targetEntityType: paragraph
+cache: true

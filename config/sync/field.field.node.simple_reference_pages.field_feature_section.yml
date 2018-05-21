@@ -1,0 +1,30 @@
+uuid: 5dead410-4dff-42b9-9f81-3a6c08b2e7c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_reference_sections.ar_round_feature_section
+    - eck.eck_type.ar_reference_sections.ar_testimonial_section
+    - field.storage.node.field_feature_section
+    - node.type.simple_reference_pages
+id: node.simple_reference_pages.field_feature_section
+field_name: field_feature_section
+entity_type: node
+bundle: simple_reference_pages
+label: 'Feature Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:ar_reference_sections'
+  handler_settings:
+    target_bundles:
+      ar_testimonial_section: ar_testimonial_section
+      ar_round_feature_section: ar_round_feature_section
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ar_testimonial_section
+field_type: entity_reference

@@ -1,0 +1,16 @@
+{% set img = ds_content.field_overlay_image|render|trim|striptags %}
+  <section class="review-section spad sp-pad set-bg" data-setbg="{{ img|render|trim|striptags }}">
+    <div class="container-fluid p-0 review-warp">
+      <div class="row">
+        <div class="col-xl-4">
+          <span class="sp-sub-title">Amazing studio</span>
+          <h3 class="sp-title">Clients testimonials</h3>
+        </div>
+        <div class="col-xl-7 offset-xl-1">
+          <div class="review-slider owl-carousel">
+          {{ ds_content.field_testimonial }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

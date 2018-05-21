@@ -1,0 +1,9 @@
+uuid: 967f471b-77c3-4271-a358-c7732057f7dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.ar_reference_sections
+name: 'AR Testimonial Section'
+type: ar_testimonial_section
+description: 'To add the testimonials'

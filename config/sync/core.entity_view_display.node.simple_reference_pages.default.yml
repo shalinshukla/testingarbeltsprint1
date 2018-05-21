@@ -1,0 +1,35 @@
+uuid: 86b57f08-729d-43cd-982b-9ddfa21afe02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.simple_reference_pages.field_feature_section
+    - field.field.node.simple_reference_pages.field_reference_section
+    - node.type.simple_reference_pages
+  module:
+    - user
+id: node.simple_reference_pages.default
+targetEntityType: node
+bundle: simple_reference_pages
+mode: default
+content:
+  field_feature_section:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_reference_section:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  links: true

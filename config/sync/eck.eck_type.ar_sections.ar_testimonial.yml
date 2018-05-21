@@ -1,0 +1,9 @@
+uuid: e7080f58-7add-4130-b035-676952973779
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.ar_sections
+name: 'AR Testimonial'
+type: ar_testimonial
+description: 'To add the clients testimonial'

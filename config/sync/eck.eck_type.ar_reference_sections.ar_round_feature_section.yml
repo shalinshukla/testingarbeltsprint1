@@ -1,0 +1,9 @@
+uuid: f82c034f-668a-4433-87a5-018d2524bc57
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.ar_reference_sections
+name: 'Ar Round Feature Section'
+type: ar_round_feature_section
+description: 'To add the Feature with Round Section'
