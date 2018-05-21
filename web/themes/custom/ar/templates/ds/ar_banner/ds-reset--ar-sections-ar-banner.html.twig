@@ -1,0 +1,7 @@
+{% set img = ds_content.field_banner_image|render|trim|striptags %}
+
+  <div class="page-top-area set-bg" data-setbg="{{ img|render|trim|striptags }}">
+    <div class="breadcrumb-area">
+      <a href="#">Home</a> / <span>About us</span>
+    </div>
+  </div>

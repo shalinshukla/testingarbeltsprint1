@@ -1,0 +1,12 @@
+{% set img = ds_content.field_clients_image|render|trim|striptags %}
+{% set body = ds_content.field_clients_description|render|trim|striptags %}
+{% set name = ds_content.field_client_name|render|trim|striptags %}
+
+<div class="rs-item">
+  <div class="qute">“</div>
+  <p>{{ body|render|trim|striptags }}</p>
+  <figure class="client-pic">
+    <img src="{{ img|render|trim|striptags }}" alt="#">
+  </figure>
+  <h4>{{ name|render|trim|striptags }}, Client</h4>
+</div>

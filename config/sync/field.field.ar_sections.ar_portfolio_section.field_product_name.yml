@@ -1,0 +1,19 @@
+uuid: 0b20f7fe-f3de-43be-a09b-b143001d1e70
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_portfolio_section
+    - field.storage.ar_sections.field_product_name
+id: ar_sections.ar_portfolio_section.field_product_name
+field_name: field_product_name
+entity_type: ar_sections
+bundle: ar_portfolio_section
+label: 'Product Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

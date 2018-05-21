@@ -1,0 +1,9 @@
+uuid: 284809ac-3b8e-432b-b1db-374a4bd9a44c
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.ar_sections
+name: 'AR Features'
+type: ar_features
+description: 'To Add the Features'

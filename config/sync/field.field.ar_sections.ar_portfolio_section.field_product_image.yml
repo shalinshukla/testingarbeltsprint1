@@ -1,0 +1,38 @@
+uuid: a9db79d0-3f6f-4123-a5b3-f52764271b62
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_portfolio_section
+    - field.storage.ar_sections.field_product_image
+  module:
+    - image
+id: ar_sections.ar_portfolio_section.field_product_image
+field_name: field_product_image
+entity_type: ar_sections
+bundle: ar_portfolio_section
+label: 'Product Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

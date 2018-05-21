@@ -1,0 +1,9 @@
+uuid: aae53e30-6bfa-4de6-ab6b-ac8661166135
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.ar_reference_sections
+name: 'Ar Paragraph Category Section'
+type: ar_paragraph_category_section_
+description: 'To add the category section'

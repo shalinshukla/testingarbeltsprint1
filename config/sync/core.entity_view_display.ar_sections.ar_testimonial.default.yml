@@ -1,0 +1,70 @@
+uuid: 42b56f57-995a-4ca6-b17c-87dcd20ec5ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_testimonial
+    - field.field.ar_sections.ar_testimonial.field_client_name
+    - field.field.ar_sections.ar_testimonial.field_clients_description
+    - field.field.ar_sections.ar_testimonial.field_clients_image
+  module:
+    - ds
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - title
+        - field_clients_description
+        - field_client_name
+        - field_clients_image
+id: ar_sections.ar_testimonial.default
+targetEntityType: ar_sections
+bundle: ar_testimonial
+mode: default
+content:
+  field_client_name:
+    weight: -3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_clients_description:
+    weight: -4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_clients_image:
+    weight: -1
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

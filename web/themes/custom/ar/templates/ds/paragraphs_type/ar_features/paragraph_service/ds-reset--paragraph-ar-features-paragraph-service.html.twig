@@ -1,0 +1,14 @@
+{% set count = ds_content.field_feature_count|render|trim|striptags %}
+{% set name = ds_content.field_feature_list|render|trim|striptags %}
+
+
+
+        <div class="col-md-6">
+          <div class="icon-box">
+            <i class="flaticon-video-camera"></i>
+            <h4>{{ count|render|trim|striptags }}</h4>
+            <p>{{ name|render|trim|striptags }}</p>
+          </div>
+        </div>
+
+

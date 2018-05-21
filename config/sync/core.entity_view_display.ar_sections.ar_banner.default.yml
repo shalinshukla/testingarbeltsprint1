@@ -1,0 +1,44 @@
+uuid: 3cc50bc4-4969-47c6-af2a-80a529400a90
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_banner
+    - field.field.ar_sections.ar_banner.field_banner_image
+  module:
+    - ds
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_banner_image
+id: ar_sections.ar_banner.default
+targetEntityType: ar_sections
+bundle: ar_banner
+mode: default
+content:
+  field_banner_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: ds_content
+hidden:
+  title: true

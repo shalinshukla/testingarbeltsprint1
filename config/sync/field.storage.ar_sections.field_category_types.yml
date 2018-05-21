@@ -1,0 +1,21 @@
+uuid: cee80f25-b506-44e6-a9ea-b41bcf17ba9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - entity_reference_revisions
+    - paragraphs
+id: ar_sections.field_category_types
+field_name: field_category_types
+entity_type: ar_sections
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

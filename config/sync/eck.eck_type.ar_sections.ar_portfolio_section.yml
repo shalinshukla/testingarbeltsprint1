@@ -1,0 +1,9 @@
+uuid: bea62ac9-d3d7-461a-bf17-6fc1e287ac96
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.ar_sections
+name: 'AR Portfolio Section'
+type: ar_portfolio_section
+description: 'To add the portfolio section'

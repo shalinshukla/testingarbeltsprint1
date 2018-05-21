@@ -1,0 +1,30 @@
+uuid: f5efabb2-0102-4064-b182-1e7be0eec9fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - file
+    - image
+id: ar_sections.field_clients_image
+field_name: field_clients_image
+entity_type: ar_sections
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

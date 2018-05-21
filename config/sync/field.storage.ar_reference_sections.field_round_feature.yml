@@ -1,0 +1,19 @@
+uuid: 5f6e7565-e54b-41e1-967b-6e7e0a83d6f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+id: ar_reference_sections.field_round_feature
+field_name: field_round_feature
+entity_type: ar_reference_sections
+type: entity_reference
+settings:
+  target_type: ar_sections
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

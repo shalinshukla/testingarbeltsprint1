@@ -1,0 +1,28 @@
+uuid: 7682e072-d451-43f5-a9d7-ce1cdcde4b80
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_features
+    - field.storage.node.field_features_section
+    - node.type.page
+id: node.page.field_features_section
+field_name: field_features_section
+entity_type: node
+bundle: page
+label: 'Features Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:ar_sections'
+  handler_settings:
+    target_bundles:
+      ar_features: ar_features
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

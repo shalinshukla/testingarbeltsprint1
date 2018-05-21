@@ -1,0 +1,31 @@
+uuid: ba52d2d0-b8ee-4b95-ab96-9579bcd4171e
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_features
+    - field.storage.ar_sections.field_features
+    - paragraphs.paragraphs_type.ar_features
+  module:
+    - entity_reference_revisions
+id: ar_sections.ar_features.field_features
+field_name: field_features
+entity_type: ar_sections
+bundle: ar_features
+label: Features
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      ar_features: ar_features
+    target_bundles_drag_drop:
+      ar_features:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

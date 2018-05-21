@@ -1,0 +1,9 @@
+uuid: d61a90e0-7d57-423c-9cb7-e68fd6ac1670
+langcode: en
+status: true
+dependencies: {  }
+id: ar_features
+label: 'AR Features'
+icon_uuid: null
+description: 'To add the Features'
+behavior_plugins: {  }

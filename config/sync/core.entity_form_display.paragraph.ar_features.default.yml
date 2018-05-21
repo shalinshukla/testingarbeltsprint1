@@ -1,0 +1,33 @@
+uuid: c98442b1-0229-42ea-a44a-16e71c05bf0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ar_features.field_feature_count
+    - field.field.paragraph.ar_features.field_feature_list
+    - paragraphs.paragraphs_type.ar_features
+id: paragraph.ar_features.default
+targetEntityType: paragraph
+bundle: ar_features
+mode: default
+content:
+  field_feature_count:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_feature_list:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

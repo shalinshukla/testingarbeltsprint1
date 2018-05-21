@@ -1,0 +1,28 @@
+uuid: b10eef9d-b1d7-45be-81ab-a227fe0a6a36
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_reference_sections.ar_paragraph_category_section_
+    - field.storage.node.field_category_types
+    - node.type.page
+id: node.page.field_category_types
+field_name: field_category_types
+entity_type: node
+bundle: page
+label: 'Category Types'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:ar_reference_sections'
+  handler_settings:
+    target_bundles:
+      ar_paragraph_category_section_: ar_paragraph_category_section_
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -3,12 +3,38 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
+    - field.field.node.page.field_category_types
+    - field.field.node.page.field_features_section
+    - field.field.node.page.field_portfolio_refernce_
     - field.field.node.page.field_reference_field
     - node.type.page
   module:
-    - text
+    - ds
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - body
+        - links
+        - field_reference_field
+        - field_portfolio_refernce_
+        - field_features_section
+        - field_category_types
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
 id: node.page.default
@@ -16,13 +42,33 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  body:
+  field_category_types:
+    weight: 105
     label: hidden
-    type: text_default
-    weight: 100
-    region: content
-    settings: {  }
+    settings:
+      link: true
+      view_mode: default
     third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+  field_features_section:
+    weight: 104
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+  field_portfolio_refernce_:
+    weight: 103
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: ds_content
   field_reference_field:
     weight: 102
     label: hidden
@@ -31,10 +77,10 @@ content:
       view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
-    region: content
+    region: ds_content
   links:
     weight: 101
-    region: content
+    region: ds_content
     settings: {  }
     third_party_settings: {  }
 hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 0034154d-0dfb-4282-be3a-5ec34db78727
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+id: ar_reference_sections.field_testimonial
+field_name: field_testimonial
+entity_type: ar_reference_sections
+type: entity_reference
+settings:
+  target_type: ar_sections
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

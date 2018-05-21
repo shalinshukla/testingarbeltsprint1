@@ -1,0 +1,9 @@
+uuid: df568f1c-f41c-4eed-95b2-1a4785f38c51
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.ar_sections
+name: 'AR Banner'
+type: ar_banner
+description: 'To add the simple banner'

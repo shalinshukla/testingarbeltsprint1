@@ -1,0 +1,13 @@
+{% set count = ds_content.field_feature_count|render|trim|striptags %}
+{% set name = ds_content.field_feature_list|render|trim|striptags %}
+<div class="col-lg-3 col-md-6 fact-box">
+  <div class="fact-content">
+    <i class="flaticon-gamepad"></i>
+    <h2>{{ count|render|trim|striptags }}</h2>
+    <p>{{ name|render|trim|striptags }}</p>
+  </div>
+</div>
+
+
+
+

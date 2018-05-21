@@ -10,7 +10,7 @@ id: node.page.field_reference_field
 field_name: field_reference_field
 entity_type: node
 bundle: page
-label: 'Reference Field'
+label: 'Details Paragraph'
 description: ''
 required: false
 translatable: false
@@ -24,5 +24,5 @@ settings:
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: ar_paragraph_with_images
 field_type: entity_reference

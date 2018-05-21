@@ -1,0 +1,56 @@
+uuid: 924e6493-8729-43e1-857d-026b8b09ac65
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.ar_sections.round_feature
+    - eck.eck_type.ar_sections.ar_features
+    - field.field.ar_sections.ar_features.field_features
+  module:
+    - ds
+    - entity_reference_revisions
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - title
+        - field_features
+id: ar_sections.ar_features.round_feature
+targetEntityType: ar_sections
+bundle: ar_features
+mode: round_feature
+content:
+  field_features:
+    type: entity_reference_revisions_entity_view
+    weight: -4
+    label: hidden
+    settings:
+      view_mode: ar_round_features
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: ds_content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: ds_content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

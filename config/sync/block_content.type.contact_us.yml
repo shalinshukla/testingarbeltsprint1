@@ -1,0 +1,8 @@
+uuid: 59c0b59a-0181-494a-b233-ef3ff72392da
+langcode: en
+status: true
+dependencies: {  }
+id: contact_us
+label: 'Contact Us'
+revision: 1
+description: 'To add the contact us block'

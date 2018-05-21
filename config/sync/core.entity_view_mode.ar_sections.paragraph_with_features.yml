@@ -1,0 +1,10 @@
+uuid: 3e2cae10-d1c4-4100-b5bb-777f35dc7237
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+id: ar_sections.paragraph_with_features
+label: 'Paragraph With Features'
+targetEntityType: ar_sections
+cache: true

@@ -1,0 +1,10 @@
+uuid: 8beaa4ca-2515-466e-a115-6ed7e06dbf98
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+id: ar_sections.round_feature
+label: 'Round Feature'
+targetEntityType: ar_sections
+cache: true

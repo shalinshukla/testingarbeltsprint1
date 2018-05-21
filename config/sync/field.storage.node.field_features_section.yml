@@ -1,0 +1,20 @@
+uuid: d090079f-8408-4e32-9681-5d8d233a8ec2
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+id: node.field_features_section
+field_name: field_features_section
+entity_type: node
+type: entity_reference
+settings:
+  target_type: ar_sections
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

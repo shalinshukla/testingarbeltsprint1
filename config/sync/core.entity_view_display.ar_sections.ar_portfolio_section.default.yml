@@ -1,0 +1,72 @@
+uuid: ad9e7382-dd23-4e81-a5e1-e308fff2591d
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_portfolio_section
+    - field.field.ar_sections.ar_portfolio_section.field_product_description
+    - field.field.ar_sections.ar_portfolio_section.field_product_image
+    - field.field.ar_sections.ar_portfolio_section.field_product_name
+  module:
+    - ds
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - title
+        - field_product_name
+        - field_product_description
+        - field_product_image
+id: ar_sections.ar_portfolio_section.default
+targetEntityType: ar_sections
+bundle: ar_portfolio_section
+mode: default
+content:
+  field_product_description:
+    weight: -3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_product_image:
+    weight: -2
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: ds_content
+  field_product_name:
+    weight: -4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: ds_content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 682d6c11-bd05-47f4-b0c6-b68bd36f1b33
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+id: ar_reference_sections.field_category_refernce
+field_name: field_category_refernce
+entity_type: ar_reference_sections
+type: entity_reference
+settings:
+  target_type: ar_sections
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

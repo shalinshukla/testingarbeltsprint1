@@ -1,0 +1,31 @@
+{% set title = ds_content.title|render|trim|striptags %}
+{% set paragraph = ds_content.field_paragraph|render|trim|striptags %}
+{% set image = ds_content.field_paragraph_image|render|trim|striptags %}
+{% set sub_title = ds_content.field_sub_title|render|trim|striptags %}
+<section class="services-section spad">
+  <div class="container-fluid services-warp">
+    <div class="row">
+      <div class="services-text">
+        <div class="container p-0">
+          <span class="sp-sub-title">{{ title|render|trim|striptags }}</span>
+          <h3 class="sp-title">{{ sub_title|render|trim|striptags }}</h3>
+          <p>{{ paragraph|render|trim|striptags }}</p>
+          <a href="#" class="site-btn">Read More</a>
+        </div>
+      </div>
+      <div class="container p-0">
+        <div class="row">
+          <div class="col-xl-8 offset-xl-4">
+            <div class="row">
+              {{ ds_content.field_category_types }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
