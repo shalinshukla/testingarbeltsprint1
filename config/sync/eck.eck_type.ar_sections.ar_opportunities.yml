@@ -1,0 +1,9 @@
+uuid: 858ecf0f-e07b-43b9-939c-85d0fa4e26bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.ar_sections
+name: 'AR Opportunities'
+type: ar_opportunities
+description: ''

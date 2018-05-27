@@ -1,0 +1,120 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Design of Typography.
+ */
+
+/* Alignment */
+.flex { @include flexbox(); }
+
+.inline-flex { @include inline-flex; }
+
+.flex-wrap { @include flex-wrap(wrap) }
+
+.vertical-align-top { @include align-items(flex-start); }
+
+.vertical-align-bottom { @include align-items(flex-end); }
+
+.vertical-align-middle { @include align-items(center); }
+
+
+/* Title */
+@mixin title-word {
+  float: left;
+  margin: 0;
+  padding-right: 75px;
+  padding-bottom: 35px;
+  font-size: $font-size-h2;
+  line-height: 46px;
+  /*font-family: $opensans-semibold;*/
+  font-family: $opensans-bold;
+  text-transform: uppercase;
+  text-align: right;
+  @media (max-width: $ipad-portrait) {
+    padding-right: 30px;
+    padding-bottom: 20px;
+    font-size: $font-size-30;
+    line-height: 32px;
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 10px;
+    font-size: $font-size-23;
+    line-height: 28px;
+    text-align: left;
+  }
+}
+.title-side-left {
+  .title-word,
+  .block-title {
+    width: 37%;
+    @include title-word;
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+    span {
+      word-spacing: 100vw;
+      @media (max-width: $mobile) {
+        word-spacing: normal;
+      }
+    }
+  }
+  .body {
+    float: left;
+    width: 63%;
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+    a {
+      @extend .btn;
+      margin-top: 30px; 
+      @media (max-width: $ipad-portrait) {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.title-floated-left {
+  .title-word {
+    @include title-word;
+    span {
+      display: table-caption;
+      @media (max-width: $mobile) {
+        display: inline-block;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.title--large {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 60px;
+  color: $white;
+  font-size: $font-size-h2;
+  font-family: $opensans-bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 3px 4px 3px rgba(0, 0, 0, .5);
+  letter-spacing: 1.5px;
+  @media (max-width: $ipad-portrait) {
+    font-size: $font-size-30;
+  }
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
+  @media (max-width: $mobile-portrait) {
+    font-size: $font-size-23;
+  }
+}
+
+.page-header {
+  &:empty {
+    display: none;
+  }
+}

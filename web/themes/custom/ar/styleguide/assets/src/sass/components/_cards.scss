@@ -1,0 +1,279 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Cards design.
+ * - Board of Directors
+ * - Map card design
+ */
+
+.card {
+  display: inline-block;
+  width: 100%;
+  .card-title {
+    margin: 0 0 8px;
+    font-size: $font-size-23;
+    text-transform: uppercase;
+    @media (max-width: $mobile) {
+      font-size: $font-size-20;
+    }
+  }
+  &.card-report {
+    border: 1px solid rgba($white, .5);
+    h2 {
+      display: inline-block;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 10px;
+      background-color: rgba($white, .5);
+      font-size: $font-size-25;
+      font-family: $opensans-bold;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .card-body {
+      display: inline-block;
+      width: 100%;
+      padding: 24px 34px;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          display: inline-block;
+          width: 100%;
+          margin-bottom: 5px;
+          &:last-child { margin-bottom: 0; }
+          .list-title {
+            float: left;
+            @include calc('width', '100% - 80px');
+          }
+          .list-val {
+            float: left;
+            width: 80px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  &.card-info {
+    padding: 10px;
+    @include border-radius(16px);
+    h4 {
+      margin: 0;
+      padding-bottom: 28px;
+      font-family: $opensans-light;
+      @media (max-width: $mobile) {
+        padding-bottom: 15px;
+      }
+    }
+    .card-detail {
+      padding: 30px 5px;
+      @media (max-width: $mobile) {
+        padding: 15px 5px;
+      }
+    }
+    p {
+      font-size: $font-size-17;
+      font-family: $opensans-light;
+    }
+    .card-btn {
+      a {
+        @extend .btn-small;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  &.card-map {
+    display: inline-block;
+    width: 100%;
+    /*max-width: 370px;*/
+    background-color: $white;
+    text-align: center;
+    @include border-radius(24px);
+    iframe {
+      width: 100%;
+      @include border-top-left-radius(24px);
+      @include border-top-right-radius(24px);
+    }
+    a {
+      color: $grey-dark;
+    }
+    address {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 0;
+      padding: 15px;
+      font-size: $font-size-base;
+      .address {
+        margin-bottom: 18px;
+      }
+      .contact {
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Board of Directors */
+.card-board {
+  padding: 60px 0 10px;
+  @media (max-width: $ipad-portrait) {
+    padding-top: 30px;
+  }
+  h2 {
+    position: relative;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      margin-bottom: 40px;
+    }
+    &::after {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      left: 50%;
+      display: inline-block;
+      height: 18px;
+      width: 26px;
+      margin: 0 0 -44px -13px;
+      background-image: url('../images/down-arrow.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      content: '';
+      @include transition(all .7s ease 0s);
+    }
+  }
+  &.show-card {
+    h2 {
+      &::after {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+  &:first-of-type {
+    .cards-wrap-main {
+      display: block;
+    }
+  }
+  .cards-wrap-main {
+    display: none;
+    /*&.cards-wrap-main-hide {
+      position: absolute;
+      z-index: -10;
+      opacity: 0;
+    }*/
+  }
+  .cards-wrap {
+    width: 100%;
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    .card-info {
+      margin-right: 58px;
+      /*margin-bottom: 58px;*/
+      margin-bottom: 60px;
+      @include calc('width', '33.33% - 39px');
+      &:last-child,
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      @media (max-width: $ipad-portrait) {
+        margin-right: 30px;
+        margin-bottom: 30px;
+        @include calc('width', '33.33% - 20px');
+      }
+      @media (max-width: $ipad-portrait) {
+        @include calc('width', '50% - 15px');
+        &:nth-child(3n) {
+          margin-right: 30px;
+        }
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+      @media (max-width: $mobile-portrait) {
+        width: 100%;
+        margin-right: 0;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .card-img {
+    img {
+      width: 100%;
+      @include border-radius(12px);
+    }
+  }
+
+  /* Tempory design */
+  &:nth-child(2) {
+    background-color: $green-light;
+  }
+}
+
+/* Map card design */
+.card-location {
+  color: $grey-dark;
+  padding-bottom: 0;
+  &.container-xs {
+    padding-bottom: 0;
+  }
+  h2 {
+    @extend .title--large;
+  }
+  .body {
+    width: 100%;
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    .card-map {
+      margin-top: 30px;
+      margin-right: 30px;
+      @include calc('width', '50% - 15px');
+      &:first-child,
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+      &:nth-child(2n),
+      &:last-child {
+        margin-right: 0;
+      }
+      @media (max-width: 580px) {
+        width: 100%;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      a {
+        @include filter(grayscale(100%));
+      }
+    }
+    .contact-map {
+      display: block;
+      max-width: 275px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 15px;
+      text-align: center;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  ~ .form-enquiries {
+    h2 {
+      @include text-shadow(3px 4px 3px rgba($black ,0.5));
+    }
+  }
+}

@@ -9,12 +9,12 @@
 
 'use strict';
 
-$(window).on('load', function() {
+jQuery(window).on('load', function() {
 	/*------------------
 		Preloder
 	--------------------*/
-	$(".loader").fadeOut(); 
-	$("#preloder").delay(400).fadeOut("slow");
+	jQuery(".loader").fadeOut(); 
+	jQuery("#preloder").delay(400).fadeOut("slow");
 
 });
 
@@ -23,8 +23,8 @@ $(window).on('load', function() {
 	/*------------------
 		Navigation
 	--------------------*/
-	$('.nav-switch').on('click', function(event) {
-		$('.main-menu').slideToggle(400);
+	jQuery('.nav-switch').on('click', function(event) {
+		jQuery('.main-menu').slideToggle(400);
 		event.preventDefault();
 	});
 
@@ -32,7 +32,7 @@ $(window).on('load', function() {
 	/*------------------
 		PORTFOLIO
 	--------------------*/
-	if($('.portfolio-warp').length > 0 ) {
+	if(jQuery('.portfolio-warp').length > 0 ) {
 		var containerEl = document.querySelector('.portfolio-warp');
 		var mixer = mixitup(containerEl);
 	}
@@ -41,7 +41,7 @@ $(window).on('load', function() {
 	/*------------------
 		Background set
 	--------------------*/
-	$('.set-bg').each(function() {
+	jQuery('.set-bg').each(function() {
 		var bg = $(this).data('setbg');
 		$(this).css('background-image', 'url(' + bg + ')');
 	});
@@ -52,9 +52,9 @@ $(window).on('load', function() {
 		Hero Slider
 	--------------------*/
 	var w_height = $(window).innerHeight();
-	$('.hs-item').height(w_height);
+	jQuery('.hs-item').height(w_height);
 	
-	$('.hero-slider').owlCarousel({
+	jQuery('.hero-slider').owlCarousel({
 		loop: true,
 		nav: true,
 		dots: true,
@@ -65,15 +65,15 @@ $(window).on('load', function() {
 		items: 1,
 		autoplay: true
 	});
-	var dot = $('.hero-slider .owl-dot');
+	var dot = jQuery('.hero-slider .owl-dot');
 	dot.each(function() {
-		var index = $(this).index() + 1;
+		var index = jQuery(this).index() + 1;
 		if(index < 10){
-			$(this).html('0').append(index);
-			$(this).append('<span>.</span>');
+			jQuery(this).html('0').append(index);
+			jQuery(this).append('<span>.</span>');
 		}else{
-			$(this).html(index);
-			$(this).append('<span>.</span>');
+			jQuery(this).html(index);
+			jQuery(this).append('<span>.</span>');
 		}
 	});
 
@@ -81,7 +81,7 @@ $(window).on('load', function() {
 	/*------------------
 		Review Slider
 	--------------------*/
-	$('.review-slider').owlCarousel({
+	jQuery('.review-slider').owlCarousel({
 		margin: 10,
 		loop: true,
 		nav: false,
@@ -94,7 +94,7 @@ $(window).on('load', function() {
 	/*------------------
 		Work Slider
 	--------------------*/
-	$('.work-slider').owlCarousel({
+	jQuery('.work-slider').owlCarousel({
 		margin: 0,
 		loop: true,
 		nav: true,
@@ -109,17 +109,17 @@ $(window).on('load', function() {
 	/*------------------
 		Circle progress
 	--------------------*/
-	$('.circle-progress').each(function() {
+	jQuery('.circle-progress').each(function() {
 		var cpvalue = $(this).data("cpvalue");
 		var cpcolor = $(this).data("cpcolor");
 		var cptitle = $(this).data("cptitle");
 		var cpid 	= $(this).data("cpid");
 
-		$(this).append('<div class="'+ cpid +'"></div><div class="progress-info"><h2>'+ cpvalue +'%</h2><p>'+ cptitle +'</p></div>');
+		jQuery(this).append('<div class="'+ cpid +'"></div><div class="progress-info"><h2>'+ cpvalue +'%</h2><p>'+ cptitle +'</p></div>');
 
 		if (cpvalue < 100) {
 
-			$('.' + cpid).circleProgress({
+			jQuery('.' + cpid).circleProgress({
 				value: '0.' + cpvalue,
 				size: 240,
 				thickness: 3,
@@ -127,7 +127,7 @@ $(window).on('load', function() {
 				emptyFill: "rgba(0, 0, 0, 0)"
 			});
 		} else {
-			$('.' + cpid).circleProgress({
+			jQuery('.' + cpid).circleProgress({
 				value: 1,
 				size: 240,
 				thickness: 3,
@@ -142,8 +142,8 @@ $(window).on('load', function() {
 	/*------------------
 		Accordions
 	--------------------*/
-	$('.panel-link').on('click', function (e) {
-		$('.panel-link').parent('.panel-header').removeClass('active');
+	jQuery('.panel-link').on('click', function (e) {
+		jQuery('.panel-link').parent('.panel-header').removeClass('active');
 		var $this = $(this).parent('.panel-header');
 		if (!$this.hasClass('active')) {
 			$this.addClass('active');

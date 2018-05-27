@@ -1,0 +1,92 @@
+/**
+ * @file
+ * SCSS file for variables.
+ *
+ * All variables used in SCSS are defined in this file.
+ */
+
+
+/**
+ * Font face
+ */
+$opensans-extrabold: 'OpenSans Extrabold';
+$opensans-bold: 'OpenSans Bold';
+$opensans-semibold: 'OpenSans SemiBold';
+$opensans-bolditalic: 'OpenSans BoldItalic';
+$opensans-italic: 'OpenSans Italic';
+$opensans-regular: 'OpenSans Regular';
+$opensans-light: 'OpenSans light';
+
+/* URLs */
+$url-opensans-extrabold: url('../fonts/OpenSans/OpenSans-ExtraBold.woff');
+$url-opensans-bold: url('../fonts/OpenSans/OpenSans-Bold.woff');
+$url-opensans-semibold: url('../fonts/OpenSans/OpenSans-Semibold.woff');
+$url-opensans-bolditalic: url('../fonts/OpenSans/OpenSans-BoldItalic.woff');
+$url-opensans-italic: url('../fonts/OpenSans/OpenSans-Italic.woff');
+$url-opensans-regular: url('../fonts/OpenSans/OpenSans-Regular.woff');
+$url-opensans-light: url('../fonts/OpenSans/OpenSans-Light.woff');
+
+
+/* Color code */
+$white: #FFF;
+$black: #000;
+$green-light: #91DBCB;
+$green: #23B797;
+$green-diamond: #1B9F82;
+$green-dark: #2E7C70;
+$green-header: #255147;
+$grey:  #87989D;
+$grey-dark: #3A4149;
+$grey-54: #545454;
+$grey-57: #575757;
+$grey-33: #333;
+$grey-ba: #BABDBF;
+
+/* Grey Striped - descending/ascending */
+$grey-100: #3A4149;
+$grey-90:  #4D545B;
+$grey-80:  #61676D;
+$grey-70:  #757A7F;
+$grey-60:  #898D92;
+$grey-50:  #9CA0A4;
+$grey-40:  #B0B3B6;
+$grey-30:  #C4C6C8;
+$grey-20:  #D8D9DB;
+$grey-10:  #EBECEC;
+
+
+/* Font size */
+$font-size-base: 18px;
+@media (max-width: 1200px){
+  $font-size-base: 16px;
+}
+
+$font-size-diamond: floor(($font-size-base * 1.3889));
+$font-size-9: ceil(($font-size-base *  0.5)); //9px
+$font-size-10: floor(($font-size-base *  0.56)); //10px
+$font-size-13: ceil(($font-size-base *  0.72)); //13px
+$font-size-14: ceil(($font-size-base *  0.75)); //14px
+$font-size-15: ceil(($font-size-base *  0.833)); //15px
+$font-size-16: floor(($font-size-base *  0.9)); //16px
+$font-size-17: ceil(($font-size-base *  0.944)); //17px
+$font-size-20: ceil(($font-size-base *  1.1)); //20px
+$font-size-22: ceil(($font-size-base *  1.2)); //22px
+$font-size-23: floor(($font-size-base *  1.3)); //23px
+$font-size-25: floor(($font-size-base *  1.4)); //25px
+$font-size-27: floor(($font-size-base *  1.5)); //27px
+$font-size-28: floor(($font-size-base *  1.56)); //28px
+$font-size-30: floor(($font-size-base *  1.67)); //30px
+$font-size-h2: ceil(($font-size-base *  2.2)); //40px
+
+
+/**
+ * Media query ( for responsive design )
+ */
+$small-desktop: 1200px;
+$ipad: 1024px;
+$ipad-portrait: 992px;
+$mobile: 767px;
+$mobile-landscape: 600px;
+$mobile-portrait: 480px;
+$small-mobile-portrait: 360px;
+/* End */

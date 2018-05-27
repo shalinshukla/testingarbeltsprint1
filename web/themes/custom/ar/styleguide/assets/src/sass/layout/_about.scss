@@ -1,0 +1,54 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * About page SCSS
+ */
+
+
+/* About northern silica */
+.about-northern-silica {
+  padding: 75px 0 110px;
+  font-family: $opensans-light;
+  letter-spacing: .9px;
+  overflow: hidden;
+  @media (max-width: $ipad-portrait) {
+    padding: 50px 0;
+  }
+  p {
+    margin-bottom: 20px;
+    line-height: 23px;
+    &:last-child { margin-bottom: 0; }
+  }
+  .title-word {
+    span {
+      line-height: inherit;
+    }
+  }
+  .block-title,
+  .title-word {
+    margin-top: -6px;
+    @media (max-width: $mobile-portrait) {
+      margin-top: -3px;
+    }
+  }
+}
+.about-northern-silica-home-block {
+  padding: 80px 0 54px;
+  @media (max-width: $ipad-portrait) {
+    padding: 50px 0;
+  }
+}
+.about-parallax-content {
+  video,
+  iframe {
+    width: 100%;
+    @include border-radius(24px);
+    @include box-shadow(0 0 20px 0 rgba(0, 0, 0, .5));
+  }
+}
+
+.about-history-body {
+  font-family: $opensans-light;
+}
+

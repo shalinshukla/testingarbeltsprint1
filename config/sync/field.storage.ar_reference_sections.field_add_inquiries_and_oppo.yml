@@ -1,0 +1,19 @@
+uuid: 55d7c3c2-c696-41c6-ac7e-22b61b9ac5b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+id: ar_reference_sections.field_add_inquiries_and_oppo
+field_name: field_add_inquiries_and_oppo
+entity_type: ar_reference_sections
+type: entity_reference
+settings:
+  target_type: ar_sections
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,52 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Home page SCSS
+ */
+
+/* Diamond section */
+.bg-img {
+  position: relative;
+  padding: 50px 0;
+  background-image: url('../images/diamond-bg.jpg'); /* Image comes from back-end */
+  background-size: cover;
+  &::before {
+    @include overlay;
+    background-color: rgba($grey, .5);
+  }
+  > div:not(.contextual-links-wrapper) {
+    position: relative;
+    z-index: 21;
+  }
+  .view-more {
+    display: table;
+    margin: 30px auto 0;
+  }
+}
+
+.home-product-main-wrap {
+  position: relative;
+  background-size: cover;
+  /*&::before {
+    @include overlay;
+    z-index: 0;
+    background-color: rgba($grey, .5);
+  }*/
+  .home-product-img-wrap {
+    img {
+      height: 0;
+      width: 0;
+      opacity: 0;
+    }
+  }
+  .home-product-wrap {
+    position: relative;
+    z-index: 1;
+    padding: 50px 0;
+  }
+  .view-more {
+    display: table;
+    margin: 30px auto 0;
+  }
+}

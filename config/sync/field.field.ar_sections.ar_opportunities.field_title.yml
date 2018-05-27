@@ -1,0 +1,19 @@
+uuid: 9d68e59d-a835-4ef9-840d-ce805fb572da
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_opportunities
+    - field.storage.ar_sections.field_title
+id: ar_sections.ar_opportunities.field_title
+field_name: field_title
+entity_type: ar_sections
+bundle: ar_opportunities
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

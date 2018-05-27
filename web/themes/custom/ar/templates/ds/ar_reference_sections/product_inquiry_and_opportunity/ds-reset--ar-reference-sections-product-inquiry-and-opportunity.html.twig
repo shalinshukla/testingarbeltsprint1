@@ -1,0 +1,23 @@
+{% set img = ds_content.field_background_image|render|trim|striptags %}
+{% set title = ds_content.field_main_title|render|trim|striptags %}
+{% set subtitle = title|render|trim|striptags %}
+
+
+      <section class="contact-career" style="background-image: url('{{ img|render|trim|striptags }}');">
+        <div class="career-bg">
+          <img src="{{ img|render|trim|striptags }}">
+        </div>
+        <div class="careers-wrap"><div class="title--large career-title">{{ title }}</div>
+          <h2 class="title--large">{{ subtitle }}</h2>
+            <div class="careers-body green-bg"><div class="careers-text">
+              <p>Northern Silica is a producer of Industrial   Minerals in Canada. We are currently redeveloping  our Moberly, British Columbia operation to be able to produce high quality Silica products.</p>
+            </div><div class="equipment-list">
+              <p><strong>Employment Opportunities</strong></p>
+              <div class="view-content item-list">
+                <ul>
+                   {{ ds_content.field_add_inquiries_and_oppo }}
+                </ul>
+              </div>
+            </div></div>
+        </div>
+      </section>

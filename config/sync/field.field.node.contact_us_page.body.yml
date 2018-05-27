@@ -1,0 +1,22 @@
+uuid: b44a2458-129a-4dff-bb74-3462d43920b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.contact_us_page
+  module:
+    - text
+id: node.contact_us_page.body
+field_name: body
+entity_type: node
+bundle: contact_us_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

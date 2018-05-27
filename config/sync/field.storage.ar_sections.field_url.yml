@@ -1,0 +1,21 @@
+uuid: 625bba19-8b37-48b3-bf36-526d7e32aca2
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+id: ar_sections.field_url
+field_name: field_url
+entity_type: ar_sections
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

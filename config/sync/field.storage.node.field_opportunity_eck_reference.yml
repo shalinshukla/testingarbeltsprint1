@@ -1,0 +1,20 @@
+uuid: 04b9c8d6-2304-4bcc-8986-9c5f281ae934
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+id: node.field_opportunity_eck_reference
+field_name: field_opportunity_eck_reference
+entity_type: node
+type: entity_reference
+settings:
+  target_type: ar_reference_sections
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

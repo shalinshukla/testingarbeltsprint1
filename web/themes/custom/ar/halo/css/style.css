@@ -957,49 +957,6 @@ ol {
 	font-size: 20px;
 }
 
-.contact-form {
-	padding-top: 80px;
-}
-
-.contact-form input[type='text'],
-.contact-form input[type='email'],
-.contact-form textarea {
-	width: 100%;
-	background: none;
-	border: none;
-	border-bottom: 1px solid #fff;
-	color: #fff;
-	font-size: 14px;
-	padding: 5px 0 20px;
-	margin-bottom: 20px;
-}
-
-.contact-form textarea {
-	height: 130px;
-	padding-bottom: 10px;
-	margin-bottom: 35px;
-}
-
-.contact-form ::-webkit-input-placeholder {
-	font-style: italic;
-	color: #fff;
-}
-
-.contact-form :-ms-input-placeholder {
-	font-style: italic;
-	color: #fff;
-}
-
-.contact-form ::-ms-input-placeholder {
-	font-style: italic;
-	color: #fff;
-}
-
-.contact-form ::placeholder {
-	font-style: italic;
-	color: #fff;
-}
-
 /*---------------------
 	Footer section
 ----------------------*/

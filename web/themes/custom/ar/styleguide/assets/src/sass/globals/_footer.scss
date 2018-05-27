@@ -1,0 +1,109 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Footer SCSS.
+ */
+
+.footer {
+  margin-top: 0;
+  padding: 50px 0 30px;
+  border-top: 5px solid $grey;
+  font-size: $font-size-13;
+  font-family: $opensans-light;
+  letter-spacing: 1px;
+  .logo {
+    max-width: 175px;
+    @media (max-width: $mobile) {
+      margin-bottom: 25px;
+    }
+  }
+  strong {
+    text-transform: uppercase;
+  }
+  p {
+    margin-bottom: 3px;
+    &:last-child { margin-bottom: 0; }
+  }
+  a[href^='tel:'],
+  a[href^='fax:'] {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+}
+
+.footer-menu {
+  float: left;
+  width: 40%;
+  margin: 0 5%;
+  @media (max-width: $mobile) {
+    clear: left;
+    margin-left: 0;
+  }
+  @media (max-width: $mobile-portrait) {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
+.footer-phone,
+.footer-address {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+  @include column-count(2);
+  @media (max-width: 992px) {
+    @include column-count(1);
+  }
+  @media (max-width: $mobile) {
+    width: 55%;
+  }
+  @media (max-width: $mobile-portrait) {
+    width: 100%;
+    padding: 0;
+  }
+  strong {
+    font-size: 12px;
+  }
+}
+
+.footer-phone {
+  float: right;
+  @media (max-width: $mobile) {
+    float: left;
+  }
+}
+
+.footer-address {
+  margin-bottom: 16px;
+  strong {
+    text-transform: uppercase;
+  }
+}
+
+/* Post footer */
+.post-footer {
+  padding: 25px 0;
+  color: $grey-60;
+  font-size: $font-size-13;
+  a {
+    color: $grey-60;
+  }
+  .footer-copyright,
+  .footer-clickspace {
+    @media (max-width: 767px) {
+      float: left;
+      width: 50%;
+    }
+    @media (max-width: 640px) {
+      width: 100%;
+    }
+  }
+  .footer-clickspace {
+    @media (max-width: 640px) {
+      text-align: left;
+    }
+  }
+}

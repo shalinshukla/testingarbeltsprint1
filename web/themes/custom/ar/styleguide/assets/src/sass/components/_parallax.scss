@@ -1,0 +1,149 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Parallax design.
+ */
+
+.parallax {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  .parallax-effect {
+    display: inline-block;
+    width: 100%;
+    height: 544px;
+    background-image: url('../images/parallax-bg.jpg');
+    background-size: cover;
+    @media (max-width: 420px) {
+      height: 620px;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      height: 46%;
+      width: 100%;
+      @include background-vertical(rgba($grey-33, .5), rgba($grey-33, .2), rgba($grey-33, 0));
+      content: '';
+    }
+    &::after {
+      top: auto;
+      bottom: 0;
+      @include background-vertical(rgba($grey-33, 0), rgba($grey-33, .4), rgba($grey-33, .5));
+    }
+  }
+}
+.parallax-content {
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  @media (max-width: $mobile) {
+    padding: 0 15px;
+  }
+  .parallax-img {
+    @include calc('width', '40% + 60px');
+    margin-left: -60px;
+    @media (max-width: $mobile) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  .parallax-body {
+    float: right;
+    @include calc('width', '60% - 25px');
+    max-width: 690px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    padding: 35px;
+    @include border-radius(20px);
+    @extend .green-t-7;
+    @media (max-width: 1200px) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: $ipad-portrait) {
+      padding: 15px;
+    }
+    @media (max-width: $mobile) {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin-left: 0;
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 30px;
+      font-size: $font-size-h2;
+      font-family: $opensans-semibold;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      text-shadow: 3px 3px 2px rgba(0, 0, 0, .6);
+      @media (max-width: $ipad-portrait) {
+        margin-bottom: 20px;
+        font-size: $font-size-30;
+      }
+      @media (max-width: $mobile) {
+        font-size: $font-size-23;
+      }
+    }
+    .body {
+      font-family: $opensans-light;
+      p {
+        margin-bottom: 23px;
+        line-height: 23px;
+        letter-spacing: 1px;
+        &:last-child { margin-bottom: 0; }
+        @media (max-width: $ipad-portrait) {
+          margin-bottom: 15px;
+        }
+      }
+      a {
+        float: right;
+        margin-top: 15px;
+        @extend .btn;
+        @media (max-width: $ipad-portrait) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Home page parallax */
+.parallax-home {
+  max-height: 545px;
+  overflow: hidden;
+}
+
+/* About us parallax */
+.about-parallax {
+  position: relative;
+  .parallax-effect {
+    height: auto;
+    /*height: 800px;
+    @media (max-width: 420px) {
+      height: 620px;
+    }*/
+  }
+  p {
+    letter-spacing: .8px;
+  }
+}
+
+.about-parallax-content {
+  top: 0;
+  bottom: auto;
+  max-width: 862px;
+  margin: 95px auto 0;
+  padding: 0 15px;
+  color: $white;
+  text-align: center;
+}
+

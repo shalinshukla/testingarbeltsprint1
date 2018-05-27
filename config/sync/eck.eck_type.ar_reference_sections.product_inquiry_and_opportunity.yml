@@ -1,0 +1,9 @@
+uuid: 216b11b7-5923-4347-8e7b-3dc2df6a4fdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.ar_reference_sections
+name: 'Product Inquiry And Opportunity'
+type: product_inquiry_and_opportunity
+description: 'To add the product inquiries '

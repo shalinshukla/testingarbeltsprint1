@@ -8,10 +8,11 @@ global-styling:
         halo/css/animate.css: {}
         halo/css/owl.carousel.css: {}
         halo/css/style.css: {}
+        styleguide/assets/css/style.css: {}
 
 global-js:
   js:
-    halo/js/jquery-3.2.1.min.js: {}
+    #halo/js/jquery-3.2.1.min.js: {}
     halo/js/bootstrap.min.js: {}
     halo/js/owl.carousel.min.js: {}
     halo/js/mixitup.min.js: {}

@@ -1,0 +1,28 @@
+uuid: 4d25c9ec-1848-41bc-9c20-3d9d43e158b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.contact_us_page.body
+    - node.type.contact_us_page
+  module:
+    - text
+    - user
+id: node.contact_us_page.teaser
+targetEntityType: node
+bundle: contact_us_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

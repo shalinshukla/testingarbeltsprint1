@@ -1,0 +1,38 @@
+uuid: f25971c3-e30e-4f00-a25e-7cafd6aa278e
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_reference_sections.product_inquiry_and_opportunity
+    - field.storage.ar_reference_sections.field_background_image
+  module:
+    - image
+id: ar_reference_sections.product_inquiry_and_opportunity.field_background_image
+field_name: field_background_image
+entity_type: ar_reference_sections
+bundle: product_inquiry_and_opportunity
+label: 'Background Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,140 @@
+  /**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Menu SCSS.
+ */
+
+ul.menu {
+  padding-left: 0;
+  list-style: none;
+  li {
+    a {
+      font-size: $font-size-16;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      @include transition(all .5s ease 0s);
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: $white;
+        text-decoration: none;
+      }
+      @media (max-width: $small-desktop) {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+/* Header menu */
+.header {
+  ul.menu {
+    float: right;
+    clear: right;
+    margin: 0;
+    li {
+      a {
+        @media (min-width: 991px) {
+          position: relative;
+          padding-bottom: 25px;
+          &.active {
+            &:after {
+              position: absolute;
+              display: block;
+              top: auto;
+              bottom: 0;
+              left: 50%;
+              margin-left: -10px;
+              border-right: 10px solid transparent;
+              border-bottom: 15px solid $green;
+              border-left: 10px solid transparent;
+              content: '';
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      width: 100%;
+      li {
+        width: 100%;
+      }
+    }
+    &.secondary {
+      li {
+        a {
+          @media (min-width: 993px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  /* Dropdown menu */
+  .dropdown.open {
+    > a {
+      background-color: $green;
+      &:hover,
+      &:focus {
+        background-color: $green;
+      }
+    }
+  }
+  ul.dropdown-menu {
+    padding: 0;
+    border: none;
+    background-color: $green;
+    li {
+      a {
+        padding: 15px !important;
+        font-size: $font-size-15;
+        &.active {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Sticky header */
+.sticky-header {
+  .header {
+    ul.menu {
+      li {
+        a {
+          padding-bottom: 22px;
+        }
+      }
+      &.secondary {
+        li {
+          a {
+            @media (min-width: 993px) {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Footer menu */
+.footer {
+  ul.menu {
+    @include column-count(2);
+    @media (max-width: 992px) {
+      @include column-count(1);
+    }
+    li {
+      margin-bottom: 5px;
+      a {
+        padding: 0;
+      }
+    }
+  }
+}

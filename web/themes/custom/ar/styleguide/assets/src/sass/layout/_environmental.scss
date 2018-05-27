@@ -1,0 +1,41 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Environmental page SCSS
+ */
+
+.environment-safety {
+  h2 {
+    span {
+      display: inline-block;
+      max-width: 375px;
+    }
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+    li {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: 15px;
+      color: $grey-dark !important;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        margin-top: 2px;
+        content: '-';
+      }
+      a {
+        color: $grey-dark !important;
+        font-size: $font-size-20;
+        text-decoration: underline;
+      }
+      strong {
+        color: $grey-dark !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Form SCSS
+ */
+
+
+/*.btn {
+  @include border-radius(100px);
+  &.btn-grey {
+    background-color: $grey;
+    color: $white;
+  }
+}*/
+
+.btn {
+  display: inline-block;
+  min-width: 161px;
+  padding: 13px 31px;
+  border: none;
+  background-color: $grey;
+  color: $white;
+  font-size: $font-size-16;
+  font-family: $opensans-regular;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+  @include border-radius(100px);
+  @include box-shadow(0 3px 3px 2px rgba(0, 0, 0, .4));
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited,
+  &:active:focus,
+  &:active:hover {
+    background-color: $grey;
+    color: $white;
+    text-decoration: none;
+    opacity: .9;
+    outline: none;
+    @include box-shadow(0 3px 3px 2px rgba(0, 0, 0, .4));
+  }
+  .glyphicon {
+    display: none;
+  }
+}
+
+.btn-white {
+  background-color: $white;
+  color: $grey-57 !important;
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited,
+  &:active:focus {
+    background-color: $white;
+    color: $grey-57;
+  }
+}
+
+.back-arrow-btn {
+  &::before {
+    display: inline-block;
+    height: 15px;
+    width: 23px;
+    margin-left: -3px;
+    background-image: url('../images/back-arrow.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    content: '';
+  }
+}
+
+.btn-small {
+  min-width: 0;
+  padding: 8px 22px;
+  font-size: $font-size-9;
+}
+
+/*.form-submit {
+  min-width: 0;
+  padding: 9px 31px;
+}*/

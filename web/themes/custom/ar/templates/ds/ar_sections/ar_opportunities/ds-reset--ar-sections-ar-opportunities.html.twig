@@ -1,0 +1,8 @@
+{% set title = ds_content.field_title|render|trim|striptags %}
+{% set url = ds_content.field_url|render|trim|striptags %}
+<li>
+  <span class="eqp-list">{{ title }}</span>
+  <a href="{{ url }}" class="eqp-apply">Apply</a>
+</li>
+
+

@@ -1,0 +1,214 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * careers page SCSS
+ * - Career detail page design
+ */
+
+/* career-bg */
+.contact-career {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .career-bg {
+    img {
+      height: 0;
+      width: 0;
+      opacity: 0;
+      /*width: auto;
+      height: 751px;*/
+    }
+  }
+  .career-title {
+    margin-bottom: 40px;
+  }
+  .careers-wrap {
+    /*position: absolute;
+    top: 0;*/
+    width: 100%;
+    margin: 20px 0 70px;
+    padding: 0 15px;
+  }
+  .careers-text {
+    margin-bottom: 20px;
+  }
+}
+
+
+.careers-body {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 44px 50px;
+  @include border-radius(20px);
+  @media (max-width: $mobile) {
+    padding: 15px;
+  }
+  .career-header {
+    margin-bottom: 40px;
+  }
+  .item-list {
+    .eqp-apply {
+      a {
+        padding: 4px 26px;
+        font-size: 12px;
+        font-family: $opensans-semibold;
+      }
+    }
+  }
+}
+
+.equipment-list {
+  .view-content {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .item-list {
+    ul {
+      padding-left: 0;
+      list-style: none;
+      li {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 25px;
+        .eqp-list {
+          display: inline-block;
+          max-width: 280px;
+          @media (max-width: 767px) {
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 5px;
+          }
+          a { color: $white; }
+        }
+        .eqp-apply {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+/* Career detail page design */
+.career-detail,
+.career-form {
+  h2 {
+    margin-top: 0;
+    margin-bottom: 32px;
+    color: $grey-dark;
+    font-size: $font-size-25;
+    font-family: $opensans-semibold;
+    text-transform: uppercase;
+  }
+}
+
+.career-detail {
+  color: $grey-dark;
+  .body {
+    p {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.career-form {
+  padding-bottom: 140px;
+  .form-fields {
+    margin-bottom: 40px;
+    padding-bottom: 68px;
+    border-bottom: 2px solid rgba($grey-dark, .1);
+    .form-item {
+      &:last-child { margin-bottom: 0; }
+    }
+    .form-type-select,
+    .form-type-files,
+    .form-type-managed-file {
+      width: 100%;
+      margin-top: 12px;
+      margin-right: 0;
+      label {
+        float: left;
+        margin-top: 6px;
+        color: $grey-54;
+        font-size: $font-size-20;
+        font-weight: normal;
+        text-transform: capitalize;
+      }
+    }
+    .form-type-select {
+      label {
+        width: 100px;
+        @media (max-width: 480px) {
+          width: 100%;
+        }
+      }
+      select {
+        float: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden !important;
+        padding-right: 50px;
+        text-transform: uppercase;
+        @include calc('width', '50% - 100px');
+        @media (max-width: 767px) {
+          @include calc('width', '100% - 100px');
+        }
+        @media (max-width: 480px) {
+          width: 100%;
+        }
+      }
+    }
+    .form-type-files,
+    .form-type-managed-file {
+      label {
+        float: left;
+        width: 220px;
+      }
+      .form-managed-file {
+        display: inline-block;
+        @include calc('width', '100% - 220px');
+        @media (max-width: 767px) {
+          width: 100%;
+          margin-top: 10px;
+        }
+        .input-file {
+          float: left;
+          width: 100%;
+          /*@include calc('width', '100% - 161px');*/
+          @media (max-width: 640px) {
+            margin-bottom: 15px;
+          }
+          .file-name {
+            .input-file-name {
+              padding-right: 25px;
+            }
+          }
+        }
+        button {
+          display: block;
+          clear: left;
+          float: right;
+          height: 40px;
+          padding: 10px;
+          font-family: $opensans-semibold;
+          background-color: $grey;
+          @media (max-width: 480px) {
+            float: left;
+          }
+          .icon { display: none; }
+        }
+      }
+      .help-block {
+        display: none;
+      }
+    }
+  }
+  .form-actions {
+    button {
+      height: 43px;
+      padding: 10px;
+      font-family: $opensans-semibold;
+    }
+  }
+}

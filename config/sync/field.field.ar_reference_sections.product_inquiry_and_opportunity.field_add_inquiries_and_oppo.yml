@@ -1,0 +1,28 @@
+uuid: ac8b6649-9f44-4d2a-8ee9-1fd0adb7fcd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_reference_sections.product_inquiry_and_opportunity
+    - eck.eck_type.ar_sections.ar_opportunities
+    - field.storage.ar_reference_sections.field_add_inquiries_and_oppo
+id: ar_reference_sections.product_inquiry_and_opportunity.field_add_inquiries_and_oppo
+field_name: field_add_inquiries_and_oppo
+entity_type: ar_reference_sections
+bundle: product_inquiry_and_opportunity
+label: 'Add Inquiries And Opportunity'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:ar_sections'
+  handler_settings:
+    target_bundles:
+      ar_opportunities: ar_opportunities
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ar_opportunities
+field_type: entity_reference

@@ -1,0 +1,61 @@
+uuid: 2a5ac9ed-8fd2-4f82-9159-9fddfffb1f24
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_opportunities
+    - field.field.ar_sections.ar_opportunities.field_title
+    - field.field.ar_sections.ar_opportunities.field_url
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - title
+        - field_title
+        - field_url
+id: ar_sections.ar_opportunities.default
+targetEntityType: ar_sections
+bundle: ar_opportunities
+mode: default
+content:
+  field_title:
+    weight: -4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_url:
+    weight: -3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: ds_content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

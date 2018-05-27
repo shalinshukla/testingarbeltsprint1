@@ -1,0 +1,492 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Components design.
+ * - Default Contextual-links design
+ */
+
+/* Panel */
+.panels-flexible-region { width: 100%; }
+.panel-flexible {
+  .panel-separator { margin-bottom: 0; }
+  .panels-flexible-row { padding: 0; }
+  .panels-flexible-region-inside { padding: 0; }
+}
+
+/* Alert message */
+.alert.messages {
+  margin-bottom: 0;
+  word-break: break-word;
+}
+.error {
+  color: #A94442 !important;
+  li {
+    color: #A94442 !important;
+  }
+}
+/* End */
+
+/* Video tag Object */
+object { display: none; }
+/* End */
+
+/* Slider gear icon design */
+.md-slider {
+  div.contextual-links-wrapper {
+    top: 135px;
+  }
+}
+/* End */
+
+/* Back to top button */
+#backtotop {
+  z-index: 999;
+}
+
+/* Pinch Zoom Effect design */
+.leaflet-container {
+  background-color: $grey-dark;
+}
+.leaflet-control-zoom { display: none; }
+/* End */
+
+
+/* Pagination design */
+.pagination {
+  margin-bottom: 0;
+  li {
+    &.active {
+      span {
+        &:hover {
+          border-color: $grey-40;
+          background-color: $grey-40;
+        }
+      }
+    }
+  }
+}
+/* End */
+
+/* Shape mixin for half triangle */
+@mixin shape-diamond-half-left {
+  margin: 0 0 0 -210px;
+  padding: 0 0 196px 196px;
+  @media (max-width: $small-desktop) {
+    margin: 0 0 0 -232px;
+  }
+}
+@mixin shape-diamond-half-right {
+  margin: 0 -210px 0 0;
+  padding: 196px 196px 0 0;
+  @media (max-width: $small-desktop) {
+    margin: 0 -232px 0 0;
+  }
+}
+
+
+/**
+ * Diamond shape
+ */
+@media (min-width: 768px) {
+  .shape {
+    display: inline-block;
+    height: 225px;
+    width: 225px;
+    background-color: $green-diamond;
+    color: $white;
+    font-size: $font-size-diamond;
+    text-align: center;
+    @media (max-width: $mobile-portrait) {
+      height: 200px;
+      width: 200px;
+    }
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+
+    /* Diamond */
+    &.shape-diamond {
+      display: inline-block;
+      margin: 50px;
+      vertical-align: middle;
+      @include transform(rotate(45deg));
+      overflow: hidden;
+      @include box-shadow(4px 6px 5px rgba(0, 0, 0, .4));
+      @media (max-width: $mobile-portrait) {
+        margin: 50px 0;
+      }
+      .shape-diamond__text {
+        height: 100%;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        @include transform(rotate(-45deg));
+      }
+    }
+    /* Large Diamond */
+    &.shape-diamond-lg {
+      height: 394px;
+      width: 394px;
+      @media (max-width: $small-desktop) {
+        height: 350px;
+        width: 350px;
+      }
+      &.shape-diamond-half-left { /* Half left diamond */
+        @include shape-diamond-half-left;
+      }
+      &.shape-diamond-half-right { /* Half Right diamond */
+        @include shape-diamond-half-right;
+      }
+      .shape-diamond__text {
+        font-size: $font-size-27;
+        @media (max-width: $small-desktop) {
+          font-size: $font-size-22;
+        }
+      }
+    }
+  }
+}
+.shape-diamond__text {
+  font-size: $font-size-25;
+  font-family: $opensans-semibold;
+  text-transform: uppercase;
+  a {
+    color: $white;
+  }
+  sup {
+    font-family: $opensans-light;
+  }
+}
+
+/* Triangle title */
+@mixin title-absolute-triangle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: 0;
+  @include transform(translateY(-50%));
+}
+
+.section-triangle-title {
+  position: relative;
+  clear: both;
+  min-height: 560px;
+  width: 100%;
+  overflow: hidden;
+  @media (max-width: $mobile) {
+    min-height: 0;
+  }
+  .body-content {
+    display: block;
+    clear: both;
+    max-width: 575px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+    .body {
+      padding-bottom: 55px;
+      @media (max-width: $ipad-portrait) and (min-width: 768px) {
+        padding-left: 30px;
+      }
+      @media (max-width: $mobile) {
+        padding-bottom: 20px;
+      }
+    }
+    p {
+      font-size: $font-size-15;
+      line-height: 28px;
+      font-family: $opensans-light;
+      letter-spacing: .8px;
+    }
+  }
+  .btn-wrap {
+    text-align: center;
+    a { @extend .btn; }
+  }
+  .container-sm {
+    @media (max-width: $ipad-portrait) and (min-width: 768px) {
+      margin: 0 0 0 auto;
+    }
+  }
+  &:nth-child(2n) {
+    .container-sm {
+      @media (max-width: $ipad-portrait) and (min-width: 768px) {
+        margin: 0 auto 0 0;
+      }
+    }
+    .body {
+      padding-right: 30px;
+      padding-left: 0;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .title-absolute-left-triangle {
+    @include title-absolute-triangle;
+  }
+  /* Right triangle */
+  .section-triangle-title:nth-child(2n) .shape-diamond-lg.shape-diamond-half-left {
+    @include shape-diamond-half-right;
+  }
+  .section-triangle-title:nth-child(2n) .title-absolute-left-triangle,
+  .title-absolute-right-triangle {
+    @include title-absolute-triangle;
+    right: 0;
+    left: auto;
+  }
+}
+@media (max-width: 767px) {
+  .title-absolute-left-triangle,
+  .title-absolute-right-triangle {
+    width: 100%;
+    padding: 30px 15px 0;
+    text-align: center;
+    .shape-diamond__text {
+      font-size: $font-size-22;
+    }
+  }
+}
+
+
+/* Group of 4 Diamond */
+@media (min-width: 768px) {
+  .diamond-4-wrap {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    .shape {
+      &.shape-diamond {
+        margin: -25px 60px;
+        &:first-child,
+        &:last-child {
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+        }
+        &:first-child { margin-top: 50px; }
+        &:last-child { margin-bottom: 50px; }
+        &:nth-child(2) { margin-left: 0; }
+        &:nth-child(3) { margin-right: 0; }
+        /*@media (max-width: $mobile) {
+          display: block;
+          margin: 45px auto;
+          &:nth-child(2) { margin-left: auto; }
+          &:nth-child(3) { margin-right: auto; }
+        }*/
+      }
+      /*@media (max-width: $mobile-portrait) {
+        height: 210px;
+        width: 210px;
+      }*/
+    }
+  }
+}
+@media (max-width: 767px) {
+  .diamond-4-wrap {
+    .shape {
+      margin-bottom: 30px;
+      text-align: center;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+/**
+ * Section types
+ */
+
+/* Background image */
+.bg-img {
+  /*background-image: url();*/
+}
+
+/* Light Green Background */
+.green-light-bg {
+  background-color: $green-light;
+  @include font-color-set-white;
+}
+
+/* Green Background */
+.green-t-7 {
+  background-color: rgba($green-header , .7);
+  @include font-color-set-white;
+}
+
+/* Green Background */
+.green-bg {
+  background-color: $green;
+  @include font-color-set-white;
+}
+
+/* Light Grey Background */
+.grey-bg {
+  background-color: $grey;
+  @include font-color-set-white;
+}
+
+/* Grey Background */
+.grey-dark-bg {
+  background-color: $grey-dark;
+  @include font-color-set-white;
+}
+
+/* White Background */
+.white-dark-bg {
+  background-color: $white;
+  @include font-color-set-dark-grey;
+}
+
+/* Grey Striped - descending/ascending */
+.grey-bg-100 { background-color: $grey-100; }
+.grey-bg-90  { background-color: $grey-90; }
+.grey-bg-80  { background-color: $grey-80; }
+.grey-bg-70  { background-color: $grey-70; }
+.grey-bg-60  { background-color: $grey-60; }
+.grey-bg-50  { background-color: $grey-50; }
+.grey-bg-40  { background-color: $grey-40; }
+.grey-bg-30  { background-color: $grey-30; }
+.grey-bg-20  { background-color: $grey-20; }
+.grey-bg-10  { background-color: $grey-10; }
+
+
+/* Overlay */
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*z-index: 20;*/
+  z-index: 3;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: multiply;
+  content: '';
+}
+
+.gradiant-overlay {
+  position: relative;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    height: 46%;
+    width: 100%;
+    @include background-vertical(rgba($grey-33, .5), rgba($grey-33, .2), rgba($grey-33, 0));
+    content: '';
+  }
+  &::after {
+    top: auto;
+    bottom: 0;
+    @include background-vertical(rgba($grey-33, 0), rgba($grey-33, .4), rgba($grey-33, .5));
+  }
+}
+
+/* Slider */
+.ns-slider {
+  position: relative;
+  border-bottom: 5px solid $grey;
+  .md-item-wrap {
+    /*&::before {
+      @include overlay;
+      background-color: rgba($green , .5);
+    }*/
+  }
+  .md-slide-items { z-index: initial; }
+  .md-arrow-left,
+  .md-arrow-right,
+  .md-objects { z-index: 999; }
+  img { width: 100%; }
+}
+.ns-slider-text {
+  line-height: 50px;
+  text-transform: uppercase;
+  text-shadow: 3px 4px 3px rgba(0, 0, 0, .5);
+}
+
+/* Pagination */
+.pagination {
+  li {
+    &:hover { color: $grey-dark; }
+    &.active {
+      > span {
+        background-color: $grey-40;
+        border-color: $grey-40;
+      }
+    }
+    a {
+      color: $grey-dark;
+      &:hover,
+      &:focus {
+        color: $grey-dark;
+      }
+    }
+  }
+}
+
+/* Disclaimer text design */
+.disclaimer-text {
+  margin-bottom: 20px;
+  color: $grey-dark;
+  font-size: $font-size-10;
+  font-family: $opensans-light;
+}
+.back-to-news-list {
+  .disclaimer-text {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Default Contextual-links design
+ */
+div.contextual-links-wrapper {
+  ul.contextual-links {
+    position: absolute !important;
+    top: 18px !important;
+    right: 0 !important;
+    margin: 0 !important;
+    padding: .25em 0 !important;
+    border: 1px solid #CCC !important;
+    background-color: $white !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+    @include border-radius(4px 0 4px 4px !important);
+    li {
+      margin: 0 !important;
+      padding: 0 !important;
+      font-size: inherit !important;
+      line-height: 100% !important;
+      font-family: inherit !important;
+      letter-spacing: 0 !important;
+      text-decoration: none !important;
+      list-style: none !important;
+      list-style-image: none !important;
+      opacity: 1 !important;
+      &::before {
+        display: none;
+      }
+      a {
+        display: block !important;
+        margin: .25em 0 !important;
+        background-color: transparent !important;
+        color: #333 !important;
+        font-size: 11px !important;
+      }
+    }
+  }
+}
+a.contextual-links-trigger {
+  background-color: transparent !important;
+}
+/* End */

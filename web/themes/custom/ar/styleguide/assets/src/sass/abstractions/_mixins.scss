@@ -1,0 +1,176 @@
+/**
+ * @file
+ * SCSS file for Mixins.
+ *
+ * All mixins used in SCSS are defined in this file.
+ * - For prefix properties 'http://shouldiprefix.com/'
+ */
+
+
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}:    -moz-calc(#{$expression});
+  #{$property}:         calc(#{$expression});
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+     -moz-box-shadow: $value;
+      -ms-box-shadow: $value;
+          box-shadow: $value;
+}
+@mixin text-shadow($value) {
+  -webkit-text-shadow: $value;
+     -moz-text-shadow: $value;
+      -ms-text-shadow: $value;
+          text-shadow: $value;
+}
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+     -moz-appearance: $value;
+      -ms-appearance: $value;
+          appearance: $value;
+}
+@mixin transform($value) {
+  -webkit-transform: $value;
+     -moz-transform: $value;
+      -ms-transform: $value;
+          transform: $value;
+}
+@mixin transform-origin($value) {
+  -webkit-transform: $value;
+     -moz-transform: $value;
+      -ms-transform: $value;
+          transform: $value;
+}
+@mixin transition($value) {
+  -webkit-transition: $value;
+     -moz-transition: $value;
+      -ms-transition: $value;
+          transition: $value;
+}
+@mixin column-count($value) {
+  -webkit-column-count: $value;
+     -moz-column-count: $value;
+      -ms-column-count: $value;
+          column-count: $value;
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin inline-flex {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+@mixin flex-wrap($value) {
+  -webkit-flex-wrap: $value;
+     -moz-flex-wrap: $value;
+      -ms-flex-wrap: $value;
+          flex-wrap: $value;
+}
+
+@mixin align-items($value) {
+  -webkit-align-items: $value;
+     -moz-align-items: $value;
+      -ms-align-items: $value;
+          align-items: $value;
+}
+@mixin justify-content($value) {
+  -webkit-justify-content: $value;
+     -moz-justify-content: $value;
+      -ms-justify-content: $value;
+          justify-content: $value;
+}
+
+@mixin border-top-left-radius($value) {
+  -webkit-border-top-left-radius: $value;
+     -moz-border-top-left-radius: $value;
+      -ms-border-top-left-radius: $value;
+          border-top-left-radius: $value;
+}
+@mixin border-top-right-radius($value) {
+  -webkit-border-top-right-radius: $value;
+     -moz-border-top-right-radius: $value;
+      -ms-border-top-right-radius: $value;
+          border-top-right-radius: $value;
+}
+@mixin filter($value) {
+  -webkit-filter: $value;
+     -moz-filter: $value;
+      -ms-filter: $value;
+          filter: $value;
+}
+
+
+@mixin font-color-set-white {
+  *:not(.btn):not(input):not(textarea):not(select):not(.form-control) { color: $white; }
+  a:not(.btn) {
+    &:hover { color: $white; }
+  }
+}
+
+@mixin font-color-set-dark-grey {
+  *:not(.btn):not(input):not(textarea):not(select):not(.form-control) { color: $grey-dark; }
+  a:not(.btn) {
+    &:hover { color: $grey-dark; }
+  }
+}
+
+/*
+* placeholder colour
+* For qimtek any coloured placeholders will also be italic
+*/
+@mixin placeholder-colour($color) {
+ &::-webkit-input-placeholder {
+   color: $color;
+ }
+ &:-moz-placeholder { /* Firefox 18- */
+   color: $color;
+ }
+ &::-moz-placeholder {  /* Firefox 19+ */
+   color: $color;
+ }
+ &:-ms-input-placeholder {
+   color: $color;
+ }
+}
+
+/**
+ * Gradient 
+ * 
+ * background-vertical = Top to Bottom
+ * background-horizontal = Left to Right
+ * background-diagonal-tl-br = Top-Left to Bottom-Right
+ * background-diagonal-bl-tr = Bottom-Left to Top-Right
+ */
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,207cca+50,2989d8+50,7db9e8+100 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,207cca+50,2989d8+50,7db9e8+100 */
+@mixin background-horizontal($left1, $left2, $right1, $right2) {
+  background: $left1;
+  background: -webkit-linear-gradient(left, $left1 0%, $left2 70.5%, $right1 70.5%, $right2 100%);
+  background:    -moz-linear-gradient(left, $left1 0%, $left2 70.5%, $right1 70.5%, $right2 100%);
+  background:         linear-gradient(to right, $left1 0%, $left2 70.5%, $right1 70.5%, $right2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$left1', endColorstr='$right1',GradientType=0);
+}
+
+@mixin background-vertical($top, $middle, $bottom) {
+  background: $top;
+  background: -webkit-linear-gradient(top, $top 0%, $middle 70.5%, $bottom 100%);
+  background:    -moz-linear-gradient(top, $top 0%, $middle 70.5%, $bottom 100%);
+  background:         linear-gradient(to bottom, $top 0%, $middle 70.5%, $bottom 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$top', endColorstr='$bottom',GradientType=0);
+}

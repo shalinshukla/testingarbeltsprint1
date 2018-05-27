@@ -1,0 +1,28 @@
+uuid: 32d197bc-6b1c-4fb1-b473-019db5cdca85
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_reference_sections.product_inquiry_and_opportunity
+    - field.storage.node.field_opportunity_eck_reference
+    - node.type.contact_us_page
+id: node.contact_us_page.field_opportunity_eck_reference
+field_name: field_opportunity_eck_reference
+entity_type: node
+bundle: contact_us_page
+label: 'Opportunity Eck Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:ar_reference_sections'
+  handler_settings:
+    target_bundles:
+      product_inquiry_and_opportunity: product_inquiry_and_opportunity
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

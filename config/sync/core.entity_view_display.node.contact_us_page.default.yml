@@ -1,0 +1,70 @@
+uuid: 43c8715d-7ec5-4506-b7af-5e1520b34d91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contact_us_page.body
+    - field.field.node.contact_us_page.field_address
+    - field.field.node.contact_us_page.field_opportunity_eck_reference
+    - node.type.contact_us_page
+  module:
+    - address
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - links
+        - body
+        - field_address
+        - field_opportunity_eck_reference
+id: node.contact_us_page.default
+targetEntityType: node
+bundle: contact_us_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_address:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: ds_content
+  field_opportunity_eck_reference:
+    weight: 103
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+  links:
+    weight: 100
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

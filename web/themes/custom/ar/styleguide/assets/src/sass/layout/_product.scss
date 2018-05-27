@@ -1,0 +1,32 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Product page SCSS
+ */
+
+
+/* Product detail page SCSS */
+.product-detail-page {
+  h2 {
+    margin-bottom: 40px;
+  }
+  img {
+    margin-bottom: 20px;
+  }
+  .product-detail-title {
+    @media (min-width: 768px) {
+      .shape {
+        background-color: $green-dark;
+      }
+    }
+  }
+  .pinch-zoom,
+  .pinch-zoom img {
+    max-width: 100%;
+    -webkit-user-drag: none;
+  }
+  div.pinch-zoom {
+      position: relative;
+  }
+}

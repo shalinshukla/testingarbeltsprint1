@@ -1,0 +1,245 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Investors page SCSS
+ * - Investors Page design
+ * - News item list
+ * - Finance List
+ * - Category list
+ * - Invester News deatils and inverster landing page design
+ */
+
+/* Investors Page design */
+.investor-login {
+  /*height: 100vh;*/
+  position: relative;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include calc('height', '100vh + 40px');
+  &::before {
+    @include overlay;
+    background-color: rgba($green , .5);
+  }
+  .investor-login-banner {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    p {
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      height: 0;
+      width: 0;
+      opacity: 0;
+    }
+  }
+  .investor-login-form {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    margin-top: -117px;
+    padding: 0 15px;
+    /*@include calc('margin-top', '50% - 148px');*/
+    /*@include calc('height', '100vh - 148px');*/
+    /*@media (max-width: 992px) {
+      margin-top: -146px;
+    }*/
+    .help-block {
+      display: none;
+    }
+  }
+}
+/* Forgot password page */
+.page-user-password {
+  #block-system-main {
+    background-color: $grey-dark;
+    form {
+      > div {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 50px 15px;
+        .control-label {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+/* End */
+
+/* News item list */
+.news-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 38px;
+  padding-bottom: 38px;
+  color: $grey-dark;
+  border-bottom: 2px solid rgba($grey-dark, .3);
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: $font-size-25;
+    font-family: $opensans-semibold;
+    text-transform: uppercase;
+    @media (max-width: $mobile) {
+      font-size: $font-size-22;
+    }
+    a {
+      color: $grey-dark;
+    }
+  }
+  .body-content {
+    margin-bottom: 26px;
+  }
+  a.btn {
+    padding: 10px 36px;
+  }
+}
+.back-to-news-list {
+  padding-top: 25px;
+  padding-bottom: 35px;
+  a {
+    position: relative;
+    display: inline-block;
+    padding-left: 14px;
+    color: $grey-dark;
+    font-size: $font-size-15;
+    font-family: $opensans-regular;
+    text-decoration: underline;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '<';
+    }
+  }
+}
+
+/* Finance List */
+.financials-list {
+  ul {
+    margin: 70px 0;
+    padding-left: 0;
+    list-style-type: none;
+    border-top: 2px solid rgba($grey-dark, .3);
+    li {
+      display: inline-block;
+      width: 100%;
+      margin-top: 15px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid rgba($grey-dark, .3);
+      span {
+        display: inline-block;
+        font-size: $font-size-20;
+        font-family: $opensans-semibold;
+        vertical-align: middle;
+        @include calc('width', '100% - 180px');
+        @media (max-width: $mobile-portrait) {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+      a.btn {
+        display: inline-block;
+        width: 175px;
+        padding: 10px 36px;
+        @media (max-width: $mobile-portrait) {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+/* Category list */
+.category-list {
+  h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: $font-size-20;
+    font-family: $opensans-semibold;
+    text-transform: uppercase;
+    a {
+      color: $grey-dark;
+    }
+  }
+  ul {
+    display: inline-block;
+    width: 100%;
+    padding-left: 0;
+    list-style-type: none;
+    li {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 16px;
+      a {
+        color: $grey-dark;
+        font-size: $font-size-20;
+      }
+    }
+  }
+}
+
+
+/* Invester News deatils and inverster landing page design */
+.news-list {
+  @include background-horizontal($grey-20, $grey-20, rgba($grey-dark, .35), rgba($grey-dark, .35));
+  @media (max-width: $mobile) {
+    background: none;
+  }
+}
+.inveater-detail-bg {
+  @media (max-width: $mobile) {
+    background-color: $grey-20;
+  }
+}
+.inveater-sidebar-bg {
+  background-color: $grey-ba;
+  @media (max-width: $mobile) {
+    background-color: rgba($grey-dark, .35);
+  }
+}
+.investor-news-landing,
+.investor-news-sidebar {
+  padding-top: 92px;
+  padding-bottom: 80px;
+  @media (max-width: $mobile-portrait) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.investor-news-landing {
+  padding-right: 138px;
+  @media (max-width: $mobile-portrait) {
+    padding-right: 80px;
+  }
+  @media (max-width: $mobile) {
+    padding-right: 0;
+  }
+}
+.investor-news-details {
+  padding-bottom: 80px;
+  padding-right: 138px;
+  @media (max-width: $mobile-portrait) {
+    padding-bottom: 40px;
+    padding-right: 80px;
+  }
+  @media (max-width: $mobile) {
+    padding-right: 0;
+  }
+}
+.investor-news-sidebar {
+  height: 100%;
+}
+

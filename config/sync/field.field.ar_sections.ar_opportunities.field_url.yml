@@ -1,0 +1,19 @@
+uuid: bcca8865-2d8a-47d2-b394-ed13a4bc1442
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.ar_sections.ar_opportunities
+    - field.storage.ar_sections.field_url
+id: ar_sections.ar_opportunities.field_url
+field_name: field_url
+entity_type: ar_sections
+bundle: ar_opportunities
+label: Url
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
