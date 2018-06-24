@@ -18,3 +18,4 @@ permissions:
   - 'view any ar_reference_sections entities'
   - 'view any ar_sections entities'
   - 'view commerce_product'
+  - 'view media'

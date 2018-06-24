@@ -5,10 +5,14 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
+    - field.field.commerce_product.default.field_product_image
     - field.field.commerce_product.default.stores
     - field.field.commerce_product.default.variations
+    - image.style.all_products
   module:
     - commerce_product
+    - ds
+    - image
     - text
 _core:
   default_config_hash: gT03TFcuSod4d9uPQNs_gqK1F1QZ0Ray5CBYW0BNLnk
@@ -24,6 +28,17 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_product_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: all_products
+      image_link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: image
+    region: content
   title:
     label: hidden
     type: string
@@ -37,9 +52,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      default_quantity: '1'
       combine: true
-      show_quantity: false
     third_party_settings: {  }
     region: content
 hidden:

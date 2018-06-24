@@ -1,0 +1,14 @@
+uuid: 43799ad3-a976-4e92-bc0c-fac1102e2dc5
+langcode: en
+status: true
+dependencies: {  }
+name: all_products
+label: 'All Products'
+effects:
+  13d6c69a-1d19-49fc-a9c8-c1498483d5cd:
+    uuid: 13d6c69a-1d19-49fc-a9c8-c1498483d5cd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1610
+      height: 662
