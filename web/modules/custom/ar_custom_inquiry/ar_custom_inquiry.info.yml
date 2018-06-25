@@ -1,0 +1,5 @@
+name: Custom Inquiry
+type: module
+description: To manage the custom inquiry
+core: 8.x
+package: Custom

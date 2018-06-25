@@ -55,6 +55,8 @@ module:
   shortcut: 0
   state_machine: 0
   system: 0
+  ar_custom_inquiry: 0
+  smtp: 0
   taxonomy: 0
   text: 0
   toolbar: 0

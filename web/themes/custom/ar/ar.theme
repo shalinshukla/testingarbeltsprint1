@@ -1,53 +1,5 @@
 <?php
 
-/**
- * @file
- * Bootstrap sub-theme.
- *
- * Place your custom PHP code in this file.
- */
-
-
-/*function ar_preprocess_node(&$variables) {
-  print('<pre style="color:red;">');
-  print_r('comes');
-  print('</pre>');
-  exit;*/
-  // $node_type = $variables['elements']['#node']->getType();
-  // if ($node_type == 'contact_us_page') {
-  //   $address = $variables['node'];
-  //   $nodeDebugValue = $address->toArray();
-  //   $addressValue = $nodeDebugValue['field_address'][0];
-  //   $updateAddressArray = array_reverse($addressValue);
-  //   $updateAddressArray = array_filter($updateAddressArray);
-  //   $addressString = implode(',', $updateAddressArray);
-  //   $encodeAdressString = urlencode ( $addressString );
-  //   $variables['encode_address'] = $encodeAdressString;
-  // print('<pre style="color:red;">');
-  // print_r($encodeAdressString);
-  // print('</pre>');
-  // exit;
-  //   dump($encodeAdressString);
-  //   $geocode = file_get_contents('https://maps.google.com/maps/api/geocode/json?key=AIzaSyByu81T2PtUmuMkrJV8ohyh-fewieYnCIg&address=' . $encodeAdressString . '&sensor=false');
-  //   $output= json_decode($geocode);
-  //   $lat = '';
-  //   $long = '';
-
-  //   if (isset($output->results[0]->geometry->location->lat)) {
-  //     $lat = $output->results[0]->geometry->location->lat;
-  //   }
-  //   if (isset($output->results[0]->geometry->location->lng)) {
-  //     $long = $output->results[0]->geometry->location->lng;
-  //   }
-  //   $latLongArray[] = [
-  //     'name'=>'test',
-  //     'lat'=>$lat,
-  //     'long'=>$long
-  //   ];
-  //   $variables['lat_lon'] = $latLongArray;
-  // }
-//}
-
 
 function ar_preprocess_ds_reset(&$variables) {
   if (isset($variables['content']['#node']) && !empty($variables['content']['#node'])) {
@@ -67,3 +19,12 @@ function ar_preprocess_ds_reset(&$variables) {
     }
   }
 }
+
+// function ar_theme(&$existing, $type, $theme, $path) {
+//   $hooks = array();
+//   $hooks['custom_inquiry_form'] = array(
+//     'render element' => 'form',
+//     'template' => '/customform/custom-inquiry-form',
+//   );
+//   return $hooks;
+// }

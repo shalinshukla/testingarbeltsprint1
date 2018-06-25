@@ -1,0 +1,7 @@
+ar_custom_inquiry.custom_inquiry_form:
+  path: 'inquiry'
+  defaults:
+    _form: '\Drupal\ar_custom_inquiry\Form\CustomInquiry'
+    _title: 'Inquiry'
+  requirements:
+    _permission: 'access administration pages'

@@ -24,7 +24,8 @@
 <div class="container p-0">
   <div class="row">
     <div class="col-xl-8 offset-xl-4">
-      <form class="contact-form">
+      <form{{ attributes }} class="contact-form">
+      {{ title_prefix }}
         <div class="row">
           <div class="col-md-6">
             {{ element.elements.name }}
@@ -35,9 +36,13 @@
           <div class="col-md-12">
             {{ element.elements.subject }}
             {{ element.elements.message }}
+            {{ element.form_build_id }}
+            {{ element.form_token }}
+            {{ element.form_id }}
             {{ element.elements.actions }}
           </div>
         </div>
+      {{ title_suffix }}
       </form>
     </div>
   </div>
