@@ -15,7 +15,14 @@ function ar_preprocess_ds_reset(&$variables) {
       $addressString = implode(',', $updateAddressArray);
       $encodeAdressString = urlencode ($addressString);
 
-      $variables['address'] = $encodeAdressString;
+      $variables['address_1'] = $encodeAdressString;
+
+      $updateAddresArray = array_reverse($addresArray[1]);
+      $updateAddresArray = array_filter($updateAddresArray);
+      $addresString = implode(',', $updateAddresArray);
+      $encodeAdresString = urlencode ($addresString);
+
+      $variables['address_2'] = $encodeAdresString;
     }
   }
 }
