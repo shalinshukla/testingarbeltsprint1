@@ -5,6 +5,7 @@ dependencies:
   config:
     - webform.webform.contact
   module:
+    - system
     - webform
   theme:
     - ar
@@ -21,4 +22,9 @@ settings:
   label_display: '0'
   webform_id: contact
   default_data: ''
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /form/opportunity
+    negate: true
+    context_mapping: {  }

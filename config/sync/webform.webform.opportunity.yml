@@ -10,7 +10,7 @@ id: opportunity
 title: Opportunity
 description: ''
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#required': true\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#required': true\n"
+elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#required': true\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Apply\n  '#submit__attributes':\n    class:\n      - 'btn btn-raised btn-lg btn-warning'\n"
 css: ''
 javascript: ''
 settings:

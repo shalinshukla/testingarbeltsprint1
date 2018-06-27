@@ -39,9 +39,9 @@ mode: default
 content:
   field_apply:
     weight: -2
-    label: above
+    label: hidden
     settings:
-      label: 'Go to [webform:title] webform'
+      label: Apply
     third_party_settings: {  }
     type: webform_entity_reference_link
     region: ds_content

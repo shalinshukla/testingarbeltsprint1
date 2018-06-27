@@ -10,6 +10,21 @@ function ar_preprocess_ds_reset(&$variables) {
     if ($node->getType() == 'contact_us_page') {
 
       $addressArray = $node->get('field_address')->getValue();
+
+      $office_1 = $addressArray[0];
+      $state_1 = $office_1['administrative_area'];
+      $country_1 = $office_1['country_code'];
+      $street_1 = $office_1['address_line1'] . ' - '. $office_1['address_line2'];
+      $postal_1 = $office_1['postal_code'];
+      $variables['first_office'] = ['#markup' => '<address><div class="address"><strong>Head Office</strong><br>' . $street_1 . '<br>' . $state_1 . ', ' . $country_1 . ' - ' . $postal_1 . '</div></address>'];
+
+      $office_2 = $addressArray[1];
+      $state_2 = $office_1['administrative_area'];
+      $country_2 = $office_1['country_code'];
+      $street_2 = $office_1['address_line1'] . ' - '. $office_1['address_line2'];
+      $postal_2 = $office_1['postal_code'];
+      $variables['second_office'] = ['#markup' => '<address><div class="address"><strong>Head Office</strong><br>' . $street_2 . '<br>' . $state_2 . ', ' . $country_2 . ' - ' . $postal_2 . '</div></address>'];
+
       $updateAddressArray = array_reverse($addressArray[0]);
       $updateAddressArray = array_filter($updateAddressArray);
       $addressString = implode(',', $updateAddressArray);
@@ -26,12 +41,3 @@ function ar_preprocess_ds_reset(&$variables) {
     }
   }
 }
-
-// function ar_theme(&$existing, $type, $theme, $path) {
-//   $hooks = array();
-//   $hooks['custom_inquiry_form'] = array(
-//     'render element' => 'form',
-//     'template' => '/customform/custom-inquiry-form',
-//   );
-//   return $hooks;
-// }

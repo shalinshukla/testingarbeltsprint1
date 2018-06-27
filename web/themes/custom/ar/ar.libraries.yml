@@ -18,3 +18,4 @@ global-js:
     halo/js/mixitup.min.js: {}
     halo/js/circle-progress.min.js: {}
     halo/js/main.js: {}
+

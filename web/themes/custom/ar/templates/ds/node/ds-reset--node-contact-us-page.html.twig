@@ -8,30 +8,11 @@
                 <div class="body">
                     <div class="card card-map white-dark-bg">
                       <iframe frameborder="0" src="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q={{ address_1 }}&output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                      <address>
-                        <div class="address">
-                          <strong>Head Office</strong><br>
-                          Suite 204, 1212 - 1st Street SE<br>
-                          Calgary, Alberta   T2G 2H8
-                        </div>
-                        <div class="contact">
-                          <p><a href="#">(403) 261-3999</a></p>
-                          <p><a href="#">sales@northernsilica.com</a></p>
-                        </div>
-                      </address>
+                      {{ first_office }}
                     </div>
                     <div class="card card-map white-dark-bg">
                     <iframe frameborder="0" src="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q={{ address_2 }}&output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                        <div class="address">
-                          <strong>Head Office</strong><br>
-                          1725 Blaeberry River Road East,<br>
-                          Golden, B.C. V0A 1H1
-                        </div>
-                        <div class="contact">
-                          <p><a href="#">(250) 344-7171</a></p>
-                          <p><a href="#">sales@northernsilica.com</a></p>
-                        </div>
-                      </address>
+                    {{ second_office }}
                     </div>
                 </div>
               </div>
