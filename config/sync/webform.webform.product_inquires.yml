@@ -10,7 +10,7 @@ id: product_inquires
 title: 'Product Inquires'
 description: ''
 category: ''
-elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\nphone:\n  '#type': tel\n  '#title': Phone\n  '#international': true\n  '#international_initial_country': auto\n"
+elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#title_display': invisible\n  '#placeholder': 'First Name'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#title_display': invisible\n  '#placeholder': 'Last Name'\nphone:\n  '#type': tel\n  '#title': Phone\n  '#title_display': invisible\n  '#placeholder': Phone\nemail:\n  '#type': email\n  '#title': Email\n  '#title_display': invisible\n  '#placeholder': Email\nmessage:\n  '#type': textarea\n  '#title': 'Inquiry Details'\n  '#title_display': invisible\n  '#placeholder': 'Inquiry Details'\n"
 css: ''
 javascript: ''
 settings:

@@ -750,3 +750,6 @@ top: 0;*/ width: 100%; margin: 20px 0 70px; padding: 0 15px; }
 .product-detail-page .pinch-zoom, .product-detail-page .pinch-zoom img { max-width: 100%; -webkit-user-drag: none; }
 .product-detail-page div.pinch-zoom { position: relative; }
 .map-gp {bottom: 50px;}
+
+
+#webform-submission-product-inquires-add-form {background-color: grey; padding: 45px;}

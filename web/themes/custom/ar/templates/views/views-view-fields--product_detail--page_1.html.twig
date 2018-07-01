@@ -37,24 +37,8 @@
       {{ drupal_view('product_images', 'block_1') }}
     <div class="row">
       <div class="col-xl-5">
-        <ul class="work-info-list">
-          <li>
-            <span>Client:</span>
-            <h4>Design Studio</h4>
-          </li>
-          <li>
-            <span>category:</span>
-            <h4>Studio photography</h4>
-          </li>
-          <li>
-            <span>Project timeline:</span>
-            <h4>3 months</h4>
-          </li>
-          <li>
-            <span>tags:</span>
-            <h4>product, photography</h4>
-          </li>
-        </ul>
+        <span class="sp-sub-title">Product Inquires</span>
+        {{ drupal_entity('webform', 'product_inquires') }}
       </div>
       <div class="col-xl-6 offset-xl-1">
         <span class="sp-sub-title">Al Rehman</span>

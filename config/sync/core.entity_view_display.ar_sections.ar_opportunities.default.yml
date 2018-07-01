@@ -4,12 +4,10 @@ status: true
 dependencies:
   config:
     - eck.eck_type.ar_sections.ar_opportunities
-    - field.field.ar_sections.ar_opportunities.field_apply
     - field.field.ar_sections.ar_opportunities.field_title
     - field.field.ar_sections.ar_opportunities.field_url
   module:
     - ds
-    - webform
 third_party_settings:
   ds:
     layout:
@@ -31,20 +29,11 @@ third_party_settings:
         - title
         - field_title
         - field_url
-        - field_apply
 id: ar_sections.ar_opportunities.default
 targetEntityType: ar_sections
 bundle: ar_opportunities
 mode: default
 content:
-  field_apply:
-    weight: -2
-    label: hidden
-    settings:
-      label: Apply
-    third_party_settings: {  }
-    type: webform_entity_reference_link
-    region: ds_content
   field_title:
     weight: -4
     label: hidden
