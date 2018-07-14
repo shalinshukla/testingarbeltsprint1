@@ -15,16 +15,16 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
-        classes: {  }
         wrappers:
           ds_content: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
         link_custom: ''
+        classes:
+          layout_class: {  }
     regions:
       ds_content:
-        - title
         - field_round_feature
 id: ar_reference_sections.ar_round_feature_section.default
 targetEntityType: ar_reference_sections
@@ -32,20 +32,13 @@ bundle: ar_round_feature_section
 mode: default
 content:
   field_round_feature:
-    weight: -4
+    weight: 0
     label: hidden
     settings:
       view_mode: round_feature
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
-    region: content
-  title:
-    label: hidden
-    type: string
-    weight: -5
-    region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-hidden: {  }
+    region: ds_content
+hidden:
+  title: true

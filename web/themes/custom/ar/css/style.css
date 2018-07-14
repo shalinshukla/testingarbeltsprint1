@@ -1,3 +1,21 @@
 /**
  * Place your custom styles here.
  */
+.page-wsn-content {
+  display: block;
+  max-width: 50%;
+  margin: 60px auto;
+}
+
+.user-style-login {
+    background: gray;
+    padding-top: 96px;
+}
+
+.user-style-login label {
+  color: #fff;
+}
+
+.text-footer {
+  color: #fff;
+}

@@ -1,0 +1,8 @@
+uuid: 9776363d-da6b-4a24-a100-a4d51a05f76a
+langcode: en
+status: true
+dependencies: {  }
+id: banner_block
+label: 'Banner Block'
+revision: 0
+description: 'To add the banner blocks'

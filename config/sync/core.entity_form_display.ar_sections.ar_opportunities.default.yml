@@ -4,13 +4,23 @@ status: true
 dependencies:
   config:
     - eck.eck_type.ar_sections.ar_opportunities
+    - field.field.ar_sections.ar_opportunities.field_apply
     - field.field.ar_sections.ar_opportunities.field_title
     - field.field.ar_sections.ar_opportunities.field_url
+  module:
+    - webform
 id: ar_sections.ar_opportunities.default
 targetEntityType: ar_sections
 bundle: ar_opportunities
 mode: default
 content:
+  field_apply:
+    weight: 5
+    settings:
+      default_data: true
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
   field_title:
     weight: 3
     settings:

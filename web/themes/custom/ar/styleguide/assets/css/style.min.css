@@ -608,7 +608,7 @@ ul.menu li a:hover, ul.menu li a:focus { background-color: transparent; color: #
 height: 751px;*/ }
 .contact-career .career-title { margin-bottom: 40px; }
 .contact-career .careers-wrap { /*position: absolute;
-top: 0;*/ width: 100%; margin: 20px 0 70px; padding: 0 15px; }
+top: 0;*/ width: 100%; padding: 0 15px; }
 .contact-career .careers-text { margin-bottom: 20px; }
 
 .careers-body { max-width: 730px; margin: 0 auto; padding: 44px 50px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; border-radius: 20px; }
