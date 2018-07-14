@@ -41,3 +41,11 @@ function ar_preprocess_ds_reset(&$variables) {
     }
   }
 }
+
+function ar_preprocess_page(&$variables) {
+  $block = \Drupal\block\Entity\Block::load('productdetailbanner');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+ $variables['productdetailbanner'] = $block_content;
+}

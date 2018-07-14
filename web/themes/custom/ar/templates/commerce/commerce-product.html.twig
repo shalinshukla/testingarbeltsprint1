@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ *
+ * Default product bundle template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product_bundle: The rendered product bundle fields.
+ *   Use 'product_bundle' to print them all, or print a subset such as
+ *   'product_bundle.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product_bundle|without('title') }}
+ *   @endcode
+ * - product_bundle_entity: The product bundle entity.
+ * - product_bundle_url: The product bundle URL.
+ *
+ * @ingroup themeable
+ */
+#}
+<!-- {% if setproduct %} -->
+  <section class="single-work-section sp-pad spad">
+    <div class="container-fluid p-0">
+        <div class="work-slider owl-carousel">
+         {{ product.field_product_image }}
+        </div>
+      <div class="row">
+        <div class="col-xl-5">
+          <span class="sp-sub-title">Product Inquires</span>
+          {{ drupal_entity('webform', 'product_inquires') }}
+        </div>
+        <div class="col-xl-6 offset-xl-1">
+          <span class="sp-sub-title">Al Rehman</span>
+          <h3 class="sp-title">{{ product.title }}</h3>
+          <p>{{ product.body }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- {% endif %} -->

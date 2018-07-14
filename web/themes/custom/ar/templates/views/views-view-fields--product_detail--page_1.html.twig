@@ -34,7 +34,10 @@
 
 <section class="single-work-section sp-pad spad">
   <div class="container-fluid p-0">
-      {{ drupal_view('product_images', 'block_1') }}
+      <div class="work-slider owl-carousel">
+       {{ fields.field_product_image.content }}
+        <!-- <div class="ws-item set-bg" data-setbg="img/work-slider/2.jpg"></div> -->
+      </div>
     <div class="row">
       <div class="col-xl-5">
         <span class="sp-sub-title">Product Inquires</span>

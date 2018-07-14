@@ -1,0 +1,25 @@
+uuid: 17d64279-d16f-4319-aeb3-9e25b589c215
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:917fed89-5630-41c7-a8c7-c6504697463c'
+  module:
+    - block_content
+  theme:
+    - ar
+id: productdetailbanner
+theme: ar
+region: navigation
+weight: 0
+provider: null
+plugin: 'block_content:917fed89-5630-41c7-a8c7-c6504697463c'
+settings:
+  id: 'block_content:917fed89-5630-41c7-a8c7-c6504697463c'
+  label: 'Product Detail Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

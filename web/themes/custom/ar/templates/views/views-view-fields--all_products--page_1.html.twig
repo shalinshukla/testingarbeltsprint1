@@ -46,8 +46,9 @@
   <div class="container p-0">
     <h3 class="blog-title">{{ fields.title.content|render|trim|striptags }}</h3>
     <div class="post-metas">
-      <div class="post-meta"><a href="product-detail/{{ fields.product_id.content|trim|striptags }}">View Detail</a></div>|
-      <div class="post-meta">{{ fields.type.content|render|trim|striptags }}</div>|
+      <div class="post-meta"><a href="product/{{ fields.product_id.content|trim|striptags }}">View Detail</a></div>|
+      <!-- <div class="post-meta">{{ fields.type.content|render|trim|striptags }}</div>| -->
+      <div class="post-meta">Belts</div>|
       <div class="post-meta"><a href="/">Home</a></div>
     </div>
     <p>{{ fields.body.content }}</p>
