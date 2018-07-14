@@ -148,7 +148,7 @@ access:
 handlers:
   email_confirmation:
     id: email
-    label: 'Email confirmation'
+    label: 'Contact Us Inqiry'
     handler_id: email_confirmation
     status: true
     conditions: {  }
@@ -162,11 +162,11 @@ handlers:
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: default
+      from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
       from_name: default
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      subject: 'Thanks For InqIyry'
+      body: "<p>Thanks for your interest in my show for your upcoming lodge meeting. I am enclosing the video of my performance that you requested. I also have a web site at www.DoeEntertainment.com.</p>\n\n<p>After you review the video, let&#39;s talk. I&#39;d like to learn more about your lodge members. I&#39;ll call Friday to schedule an appointment. I look forward to this fun evening.</p>"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -194,17 +194,17 @@ handlers:
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
+      from_mail: default
       from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
+      from_name: 'New Inqiry'
       subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      body: "<p>Submitted on {{ webform_token('[webform_submission:created]', webform_submission) }}</p>\n<p>Submitted by: {{ webform_token('[webform_submission:user]', webform_submission) }}</p>\n<p>Submitted values are:</p>\n{{ webform_token('[webform_submission:values]', webform_submission) }}\n"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
       html: true
       attachments: false
-      twig: false
+      twig: true
       debug: false
       reply_to: ''
       return_path: ''

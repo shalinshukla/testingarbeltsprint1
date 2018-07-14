@@ -2,10 +2,10 @@ schemas:
   bootstrap: 8000
   ar: 8000
 favicon:
-  mimetype: image/vnd.microsoft.icon
-  path: ''
-  url: 'http://localhost/web/testingarbeltsprint1/web/themes/contrib/bootstrap/favicon.ico'
-  use_default: true
+  mimetype: image/png
+  path: 'public://favicon-1024.png'
+  url: 'http://demo.weblocal.test/themes/custom/ar/favicon.ico'
+  use_default: false
 features:
   comment_user_picture: true
   comment_user_verification: true
@@ -15,3 +15,17 @@ logo:
   path: ''
   url: ''
   use_default: true
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  slider: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: well
+  footer: ''
+  footersecond: ''
+table_responsive: '-1'
+table: ''
